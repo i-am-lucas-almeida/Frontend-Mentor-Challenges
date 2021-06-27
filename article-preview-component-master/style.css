@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--Light-Grayish-Blue);
+    color: var(--Very-Dark-Grayish-Blue);
+    font-family: 'manrope', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 2rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+#toggle{
+    display: none;
+}
+
+/***************************************************/
+main{
+    margin: 20px auto;
+    max-width: 100%;
+    width: 80rem;
+    min-height: 30rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+.box-img{
+    max-width: 100%;
+    width: 35rem;
+    min-height: 31.4rem;
+    background-image: url(images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px 0 0 10px;
+}
+
+.box-img > img{
+    max-width: 100%;
+    width: 35rem;
+    min-height: 30rem;
+    border-radius: 10px 0 0 10px;
+}
+
+.box-txt{
+    background-color: #ffffff;
+    border-radius: 0 10px 10px 0;
+    max-width: 100%;
+    width: 45rem;
+    min-height: 30rem;
+}
+
+.box-txt_c{
+    padding: 3rem;
+}
+
+.box-txt_c h1{
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.box-txt_c p{
+    margin-bottom: 25px;
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: .8;
+}
+
+.box-txt_perfil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.perfil:hover{
+    opacity: .9;
+}
+
+.perfil > img{
+    width: 5rem;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.perfil > div h2{
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.perfil > div h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: .8;
+}
+
+.share{
+    color: var(--Light-Grayish-Blue);
+    position: relative;
+    right: 20px;
+}
+
+#backg-share{
+    background-color: var(--Very-Dark-Grayish-Blue);
+    margin-top: 10px;
+    padding: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#backg-share:hover{
+    opacity: .8;
+}
+
+.modal{
+    background-color: var(--Very-Dark-Grayish-Blue);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: -50px;
+    left: -107px;
+    display: none;
+    z-index: 999;
+}
+
+.show-modal{
+    display: block;
+}
+
+.modal::before{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 90px;
+    border-top: 10px solid var(--Very-Dark-Grayish-Blue);
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.modal ul{
+    display: flex;
+    align-items: center;
+}
+
+.modal ul li{
+    padding: 0 10px;
+}
+
+.modal ul #share{
+    font-size: 1.2rem;
+    color: var(--Light-Grayish-Blue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    opacity: .6;
+}
+
+.modal ul li i{
+    color: var(--Light-Grayish-Blue);
+    cursor: pointer;
+}
+
+.modal ul li i:hover{
+    opacity: .8;
+}
+
+/***************************************************/
+@media (max-width: 820px){
+
+    body{
+        display: block;
+        
+    }
+
+    main{
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        width: 50rem;
+        min-height: 61rem;
+    }
+
+    .box-img{
+        max-width: 100%;
+        width: 50rem;
+        min-height: 31.3rem;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .box-img > img{
+        max-width: 100%;
+        width: 50rem;
+        min-height: 30rem;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .box-txt{
+        border-radius: 0 0 10px 10px;
+        width: 50rem;
+        min-height: 30rem;
+    }
+
+    .modal{
+        left: -150px;
+    }
+    
+    .show-modal{
+        display: block;
+    }
+    
+    .modal::before{
+       right: 48px;
+    }
+
+}
