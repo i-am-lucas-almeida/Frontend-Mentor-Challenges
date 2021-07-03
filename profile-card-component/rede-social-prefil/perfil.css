@@ -1,0 +1,56 @@
+body{
+    width: 450px;
+    margin:auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: 'Kumbh Sans';
+    background-color: hsl(185, 75%, 39%);
+    background-image: url(images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: -150% 150%;
+    
+}
+.container{
+    background-image: url(images/fundo-superior-azul.svg);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 180px;
+}
+.foto{
+    margin-top: -80px;
+    border-radius: 50%;
+    border: 8px solid white;
+    
+}
+
+.coluna{
+    display: inline-flex; 
+    line-height: 1.5;  
+}
+
+h2{
+    font-weight: 100;
+    color: hsl(0, 0%, 59%);
+}
+
+h3{
+    padding: 30px;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.bold1{
+    color: hsl(0, 0%, 59%);
+}
+
+.bold2{
+    color: hsl(0, 0%, 59%);
+    font-size: 15px;
+}
+
+.fundo{
+    background-color: white;
+    border-radius: 20px;  
+}

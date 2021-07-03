@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(0, 0%, 95%);
+    margin:auto;
+    padding: 50px;
+    line-height: 1.6;
+    
+}
+h3{
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    padding: 15px;
+    font-size: 30px;
+    color: white;
+}
+
+p{
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    padding: 10px;
+    font-size: 18px;
+    color: hsla(0, 0%, 100%, 0.75);
+    
+}
+.container{
+    display: flex;
+    min-height: 80vh;
+}
+
+.coluna1{
+    background-color: hsl(31, 77%, 52%);
+    padding: 50px;
+    border-radius: 20px 0 0 20px;
+    
+}
+
+.coluna2{
+    background-color: hsl(184, 100%, 22%);
+    padding: 50px;
+}
+
+.coluna3{
+    background-color: hsl(179, 100%, 13%);
+    padding: 50px;
+    border-radius: 0 20px 20px 0;
+}
+
+button{
+    font-family: 'Lexend Deca';
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 2px solid hsl(0, 0%, 95%);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn1{
+    color: hsl(31, 77%, 52%);
+}
+
+.btn2{
+    color: hsl(184, 100%, 22%);
+}
+
+.btn3{
+    color: hsl(179, 100%, 13%);
+}
+
+.btn1:hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+}
+
+.btn2:hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+}
+
+.btn3:hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+}
+
+@media screen and (max-width:600px)
+{
+    .container{
+        display: block;
+    }
+ 
+    .coluna1{
+        border-radius: 20px 20px 0 0;
+    }
+    .coluna3{
+        border-radius: 0 0 20px 20px;
+    }
+
+}
+@media screen and (max-width:900px)
+{
+    .container{
+        display: block;
+    }
+
+    .coluna1{
+        border-radius: 20px 20px 0 0;
+    }
+    .coluna3{
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+
+
