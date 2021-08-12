@@ -170,15 +170,15 @@ img{
     margin-top: 20px;
 }
 
+.valueNull{
+    display: none;
+}
+
 .valueHr{
     border: none;
     border-top: 1.5px solid #8080805e;
     border-radius: 5px;
     margin: 30px 0;
-}
-
-.valueNull{
-    display: none;
 }
 
 .value-flex{
