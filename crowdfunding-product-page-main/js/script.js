@@ -24,6 +24,24 @@ function closeMenu(mn) {
     
 };
 
+/*BUTTON TOGGLE*/
+
+const button = document.getElementById('btn-gray');
+
+const imgGray = document.getElementById('img-gray');
+
+const imgGreen = document.getElementById('img-green');
+
+button.addEventListener('click', e => {
+
+    button.classList.toggle('active');
+
+    imgGray.classList.toggle('none');
+
+    imgGreen.classList.toggle('block');
+
+});
+
 /*MODAL - SELECT VALUE*/
 
 function openModal(mn) {
@@ -102,6 +120,25 @@ function closeModalSucces(mn) {
     modalSucces.style.display = 'none';
     document.body.style.overflow = 'auto';
     location.reload();
-    
+
+};
+
+/*INPUT NUMBER VALIDATION*/
+
+function money(o, f) {
+    v_obj = o
+    v_fun = f
+    setTimeout("execmoney()", 1)
+};
+
+function execmoney() {
+    v_obj.value = v_fun(v_obj.value)
+};
+
+function mMoney(v) {
+    v = v.replace(/\D/g, "")
+    v = v.replace(/(\d{2})$/, ",$1")
+    v = v.replace(/(\d+)(\d{3},\d{2})$/g, "$1.$2")
+    return v
 };
 
