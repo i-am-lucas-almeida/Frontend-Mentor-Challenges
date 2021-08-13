@@ -136,9 +136,34 @@ function execmoney() {
 };
 
 function mMoney(v) {
-    v = v.replace(/\D/g, "")
-    v = v.replace(/(\d{2})$/, ",$1")
-    v = v.replace(/(\d+)(\d{3},\d{2})$/g, "$1.$2")
-    return v
+
+    v = v.replace(/\D/g, "");
+    v = v.replace(/(\d{2})$/, ",$1");
+    v = v.replace(/(\d+)(\d{3},\d{2})$/g, "$1.$2");
+
+    if(v.length >= 5){
+        var max = v.replace(/\./g,'').replace(',','.') > 1000;
+        var min = v.replace(/\./g,'').replace(',','.') < 25;
+  
+        if(max){
+
+           return '1.000,00';
+
+        }else if(min){
+
+           return '25,00';
+
+        }else{
+
+           return v;
+
+        }
+
+     }else{
+
+        return v;
+
+     }
+
 };
 

@@ -202,7 +202,6 @@ img{
 #number{
     margin-right: 10px;
     max-width: 100%;
-    width: 10rem;
     padding: 1.5rem;
     border: 1.5px solid #8080805e;
     border-radius: 50px;
@@ -211,9 +210,20 @@ img{
     font-weight: 600;
 }
 
-::placeholder{
-    color: var(--Dark-gray);
+#inputValue{
+    max-width: 100%;
+    width: 9rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
     font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#dollar{
+    font-size: 1.6rem;
+    color: #8080805e;
 }
 
 .float-right{
@@ -452,9 +462,9 @@ img{
 
 }
 
-@media (max-width: 360px){
+@media (max-width: 400px){
 
-    #number{
+    #inputValue{
         margin-right: 0px;
         margin-bottom: 15px;
     }

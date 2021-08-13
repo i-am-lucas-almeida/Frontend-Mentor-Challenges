@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style/style-modal.css">
+  <script src="https://kit.fontawesome.com/26783a927a.js" crossorigin="anonymous"></script>
   <title>Crowdfunding product page</title>
 </head>
 
@@ -287,7 +288,13 @@
 
               <div>
 
-                <input name="inputValue" onkeypress="money(this,mMoney)" maxlength="8" min="1,00" max="1.000,00" id="number">
+                <span id="number">
+
+                  <i class="fa fa-dollar-sign" id="dollar"></i>
+
+                  <input name="inputValue" onkeypress="money(this,mMoney)" maxlength="8" min="1,00" max="1.000,00" id="inputValue">
+
+                </span>
 
                 <button class="btn-continue" onclick="openModalSucces('modalSucces')">Continue</button>
 
@@ -343,7 +350,13 @@
 
               <div>
 
-                <input type="text" id="number" placeholder="$" maxlength="5">
+                <span id="number">
+
+                  <i class="fa fa-dollar-sign" id="dollar"></i>
+
+                  <input name="inputValue" onkeypress="money(this,mMoney)" maxlength="8" min="1,00" max="1.000,00" id="inputValue">
+
+                </span>
 
                 <button class="btn-continue" onclick="openModalSucces('modalSucces')">Continue</button>
 
