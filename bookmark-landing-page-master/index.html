@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/26783a927a.js" crossorigin="anonymous"></script>
+  <title>Bookmark landing page</title>
+
+</head>
+
+<body>
+
+  <header>
+
+    <nav>
+
+      <a href="index.html">
+
+        <img src="images/logo-bookmark.svg" class="logo-header">
+
+      </a>
+
+      <img src="images/icon-hamburger.svg" id="menu" onclick="openMenu('navMenu')">
+
+      <div class="nav-menu" id="navMenu">
+
+        <ul class="menu">
+
+          <img src="images/icon-close.svg" id="close" onclick="closeMenu('navMenu')">
+
+          <li>
+
+            <a href="index.html">
+
+              <img src="images/logo-bookmark-mobile.svg" id="logo-mobile">
+
+            </a>
+
+          </li>
+
+          <li>Features</li>
+
+          <li>Pricing</li>
+
+          <li>Contact</li>
+
+          <li class="btn-login">Login</li>
+
+        </ul>
+
+        <ul class="social-medias_mobile">
+
+          <li>
+
+            <i class="fa fa-facebook-square"></i>
+
+          </li>
+
+          <li>
+
+            <i class="fa fa-twitter"></i>
+
+          </li>
+
+        </ul>
+
+      </div><!--nav-menu-->
+
+    </nav>
+
+      <div class="container header-c">
+
+        <div class="box-c_text">
+
+          <h1>A Simple Bookmark Manager</h1>
+
+          <p>
+              A clean and simple interface to organize your favourite websites. Open a new 
+              browser tab and see your sites load instantly. Try it for free.
+          </p>
+
+          <button class="btn-browser_1">Get it on Chrome</button>
+         
+          <button class="btn-browser_2"> Get it on Firefox</button>
+
+        </div><!--box-c_text-->
+
+        <div class="box-c_image">
+
+          <img src="images/illustration-hero.svg" class="header-img">
+
+        </div><!--box-c_image-->
+
+      </div><!--container-->
+
+    
+
+  </header>
+
+  <main>
+
+    <section class="freatures">
+
+      <h2 class="subtitle">Features</h2>
+
+      <p class="paragraph">
+          Our aim is to make it quick and easy for you to access your favourite websites. 
+          Your bookmarks sync between your devices so you can access them on the go.
+      </p>
+
+    </section><!--freatures-->
+
+    <section class="slide">
+
+      <div class="slide-buttons">
+
+        <button class="btn-slide">Simple Bookmarking</button>
+
+        <button class="btn-slide">Speedy Searching</button>
+        
+        <button class="btn-slide">Easy Sharing</button>
+
+      </div><!--slide-buttons-->
+
+      <div class="slide-box">
+
+        <div class="slide-box_image">
+
+          <img src="images/illustration-features-tab-1.svg">
+
+        </div><!--slide-box_image-->
+
+        <div class="slide-box_txt">
+
+          <h3>Bookmark in one click</h3>
+
+          <p>
+            Organize your bookmarks however you like. Our simple drag-and-drop interface 
+            gives you complete control over how you manage your favourite sites.
+          </p>
+
+          <button class="btn-info">More Info</button>
+
+        </div><!--slide-box_txt-->
+
+      </div><!--slide-box-->
+
+    </section><!--slide-->
+
+    <section class="downloads">
+
+      <h2 class="subtitle">Download the extension</h2>
+
+      <p class="paragraph">
+          We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.
+      </p>
+
+      <div class="downloads-flex">
+        
+        <aside class="box-extension box-extension_1">
+
+          <img src="images/logo-chrome.svg">
+
+          <h3>Add to Chrome</h3>
+
+          <h4>Minimum version 62</h4>
+
+          <hr>
+
+          <button class="btn-extension">Add & Install Extension</button>
+
+        </aside><!--box-extension & box-extension_1-->
+
+        <aside class="box-extension box-extension_2">
+          
+          <img src="images/logo-firefox.svg">
+
+          <h3>Add to Firefox</h3>
+
+          <h4>Minimum version 55</h4>
+
+          <hr>
+
+          <button class="btn-extension">Add & Install Extension</button>
+
+        </aside><!--box-extension & box-extension_2-->
+
+        <aside class="box-extension box-extension_3">
+
+          <img src="images/logo-opera.svg">
+
+          <h3>Add to Opera</h3>
+
+          <h4>Minimum version 46</h4>
+
+          <hr>
+
+          <button class="btn-extension">Add & Install Extension</button>
+
+        </aside><!--box-extension & box-extension_3-->
+
+      </div><!--downloads-flex-->
+
+    </section><!--downloads-->
+
+    <section class="questions">
+
+      <h2 class="subtitle">Frequently Asked Questions</h2>
+
+      <p class="paragraph">
+          Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
+      </p>
+
+      <div class="accordion">
+
+        <div class="accordion-question">
+
+          <aside>
+
+            <h3 class="question">What is Bookmark?</h3>
+
+            <img src="images/icon-arrow.svg" class="arrow">
+
+            <img src="images/icon-arrow-active.svg" class="off">
+
+          </aside>
+
+          <div class="answer">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+              justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+
+          </div><!--answer-->
+
+        </div><!--accordion-question-->
+
+        <div class="accordion-question">
+
+          <aside>
+
+            <h3 class="question">How can I request a new browser?</h3>
+
+            <img src="images/icon-arrow.svg" class="arrow">
+
+            <img src="images/icon-arrow-active.svg" class="off">
+
+          </aside>
+
+          <div class="answer">
+
+            <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+              Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+              ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+
+          </div><!--answer-->
+
+        </div><!--accordion-question-->
+
+        <div class="accordion-question">
+
+          <aside>
+
+            <h3 class="question">Is there a mobile app?</h3>
+
+            <img src="images/icon-arrow.svg" class="arrow">
+
+            <img src="images/icon-arrow-active.svg" class="off">
+
+          </aside>
+
+          <div class="answer">
+
+            <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+              urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+              sollicitudin ex et ultricies bibendum.</p>
+
+          </div><!--answer-->
+
+        </div><!--accordion-question-->
+
+        <div class="accordion-question">
+
+          <aside>
+
+            <h3 class="question">What about other Chromium browsers?</h3>
+
+            <img src="images/icon-arrow.svg" class="arrow">
+
+            <img src="images/icon-arrow-active.svg" class="off">
+
+          </aside>
+
+          <div class="answer">
+
+            <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+              vitae neque eget nisl gravida pellentesque non ut velit.</p>
+
+          </div><!--answer-->
+
+        </div><!--accordion-question-->
+
+        <button class="btn-info">More Info</button>
+
+      </div><!--accordion-->
+
+    </section><!--questions-->
+
+    <section class="signUp">
+
+      <div class="signUp-c">
+
+        <h3>35,000+ already joined</h3>
+
+        <h2>Stay up-to-date with what we’re doing</h2>
+
+        <form action="#">
+
+          <fieldset class="backg-email">
+
+            <input type="email" name="email" id="email" placeholder="Enter your email address">
+
+            <small>Whoops, make sure it's an email</small>
+
+          </fieldset>
+
+          <button type="button" class="btn-contact">Contact Us</button>
+
+        </form>
+
+      </div><!--signUp-c-->
+
+    </section><!--signUp-->
+
+  </main>
+
+  <footer>
+
+    <div class="container footer-c">
+
+      <a href="index.html">
+
+        <img src="images/logo-bookmark-footer.svg" class="logo-footer">
+  
+      </a>
+  
+      <ul class="menu-footer">
+  
+        <li>Features</li>
+  
+        <li>Pricing</li>
+  
+        <li>Contact</li>
+  
+      </ul>
+  
+      <ul class="social-medias">
+  
+        <li>
+  
+          <i class="fa fa-facebook-square"></i>
+  
+        </li>
+  
+        <li>
+  
+          <i class="fa fa-twitter"></i>
+  
+        </li>
+  
+      </ul><!--social-medias-->
+
+    </div><!--container-->
+
+  </footer>
+  
+  <script src="js/script.js"></script>
+
+</body>
+</html>
