@@ -124,8 +124,8 @@ nav{
         width: 1.6rem;
         display: block;
         position: absolute;
-        top: 23px;
-        right: 0;
+        top: 45px;
+        right: 50px;
     }
 
     #logo-mobile{
@@ -141,13 +141,13 @@ nav{
         left: 0;
         width: 100%;
         min-height: 100%;
-        padding: 20px;
         display: none;
         justify-content: center;
         z-index: 99999999;
     }
 
     .nav-menu .menu{
+        padding: 20px 50px;
         position: relative;
         max-width: 100%;
         width: 40rem;
@@ -303,14 +303,14 @@ nav{
     width: 550px;
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 .slide{
     margin: 0 auto;
     max-width: 100%;
     width: 1400px;
-    padding: 50px;
+    padding: 50px 30px;
     text-align: center;
 }
 
@@ -325,6 +325,7 @@ nav{
 }
 
 .btn-slide{
+    max-width: 100%;
     width: 200px;
     position: relative;
     bottom: -1.5px;
@@ -334,6 +335,7 @@ nav{
     color: var(--GrayishBlue);
     font-size: 1.5rem;
     font-weight: 500;
+    text-align: center;
     padding: 2rem;
     cursor: pointer;
     transition: .3s;
@@ -387,7 +389,7 @@ nav{
         max-width: 100%;
         width: 45rem;
         text-align: center;
-        padding-top: 50px;
+        padding: 50px 30px 0 30px;
     }
 
     .slide-box_txt > h3{
@@ -398,6 +400,33 @@ nav{
         display: grid;
         justify-content: center;
         margin: 30px auto;
+    }
+
+    .slide-box_image > img{
+        margin: 0 auto;
+        width: 35rem;
+        padding: 0 20px;
+    }
+
+}
+
+@media (max-width: 650px){
+
+    .slide-buttons{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1.5px solid transparent;
+    }
+
+    .btn-slide{
+        width: 250px;
+        padding: 3rem;
+        border-bottom: 1.5px solid #80808050;
+    }
+
+    .btn-slide:hover{
+        border-bottom: 3.5px solid var(--SoftRed);
     }
 
 }
@@ -521,7 +550,7 @@ hr{
     margin: 0 auto;
     max-width: 100%;
     width: 600px;
-    padding: 100px 20px;
+    padding: 100px 30px;
 }
 
 .questions > h2{
@@ -549,28 +578,42 @@ hr{
     justify-content: space-between;
 }
 
-.accordion-question > aside > img{
-    width: 2rem;
-    cursor: pointer;
-}
-
-.accordion-question > aside > .off{
-    display: none;
-}
-
-.question{
+.fa-chevron-down{
+    color: var(--SoftBlue);
     font-size: 2rem;
-    font-weight: 400;
     cursor: pointer;
     transition: .3s;
 }
 
-.question:hover{
+.active  .fa-chevron-down{
     color: var(--SoftRed);
+    transform: rotate(180deg);
+}
+
+.question > h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.question > h3:hover{
+    color: var(--SoftRed);
+}
+
+.active .question > h3{
+    font-weight: 500;
+}
+
+.answer > p{
+    margin-bottom: 20px;
 }
 
 .answer{
     display: none;
+}
+
+.active > .answer{
+    display: block;
 }
 
 .btn-info{
@@ -619,9 +662,12 @@ hr{
     margin-bottom: 30px;
     font-weight: 500;
     font-size: 3rem;
+    line-height: 45px;
 }
 
 form{
+    max-width: 100%;
+    width: 430px;
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
@@ -629,6 +675,9 @@ form{
 }
 
 .backg-email{
+    margin: 0 auto;
+    max-width: 100%;
+    width: 280px;
     background-color: transparent;
     border-radius: 5px;
     border: none;
@@ -660,7 +709,6 @@ small{
 }
 
 .btn-contact{
-    margin-left: 15px;
     background-color: var(--SoftRed);
     color: #ffffff;
     font-weight: 600;
@@ -676,6 +724,26 @@ small{
     background-color: #ffffff;
     color: var(--SoftRed);
     border-color: var(--SoftRed);
+}
+
+@media(max-width: 600px){
+
+    form{
+        margin: 0 auto;
+        display: block;
+    }
+
+    #email{
+        max-width: 100%;
+        width: 280px;
+    }
+    
+    .btn-contact{
+        max-width: 100%;
+        width: 280px;
+        margin: 0 auto;
+    }
+
 }
 
 /***************************************/
@@ -742,4 +810,31 @@ footer{
         cursor: pointer;
         transition: .3s;
     }
+}
+
+/********************************/
+@media (max-width: 500px){
+
+    nav{
+        padding: 30px;
+    }
+
+    .nav-menu .social-medias_mobile{
+        margin-bottom: 200px;
+    }
+
+    .box-c_text > h1{
+        font-size: 3rem;
+    }
+
+    .slide-box_txt{
+        margin: 0 auto;
+        max-width: 100%;
+        width: 40rem;
+    }
+
+    .subtitle{
+        font-size: 2.5rem;
+    }
+
 }
