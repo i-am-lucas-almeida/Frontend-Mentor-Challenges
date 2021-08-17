@@ -95,15 +95,87 @@ const navigation = () => {
       slideText.innerHTML = `<h3 class="h3">${freatures[slide].h3}</h3>
       <p>${freatures[slide].slideText}</p>`;
 
+      button1.classList.add('activeBtn');
+
       slide++;
 
 };
 
 navigation();
 
-button1.addEventListener('click', navigation);
+button1.addEventListener('click', e => {
 
-button2.addEventListener('click', navigation);
+      slideImage.innerHTML = `<img src="${freatures[0].slideImage}">`;
+      slideText.innerHTML = `<h3 class="h3">${freatures[0].h3}</h3>
+      <p>${freatures[0].slideText}</p>`;
 
-button3.addEventListener('click', navigation);
+      button1.classList.add('activeBtn');
+      button2.classList.remove('activeBtn');
+      button3.classList.remove('activeBtn');
 
+});
+
+button2.addEventListener('click', e => {
+
+      slideImage.innerHTML = `<img src="${freatures[1].slideImage}">`;
+      slideText.innerHTML = `<h3 class="h3">${freatures[1].h3}</h3>
+      <p>${freatures[1].slideText}</p>`;
+
+      button1.classList.remove('activeBtn');
+      button2.classList.add('activeBtn');
+      button3.classList.remove('activeBtn');
+
+});
+
+button3.addEventListener('click', e => {
+
+      slideImage.innerHTML = `<img src="${freatures[2].slideImage}">`;
+      slideText.innerHTML = `<h3 class="h3">${freatures[2].h3}</h3>
+      <p>${freatures[2].slideText}</p>`;
+
+      button1.classList.remove('activeBtn');
+      button2.classList.remove('activeBtn');
+      button3.classList.add('activeBtn');
+
+});
+
+/******************************************/
+
+/*VALIDATION EMAIL*/
+
+const form = document.getElementById('form');
+
+form.addEventListener('submit', e => {
+
+      e.preventDefault();
+
+      const email = form['email'];
+      const emailValue = email.value;
+      const small = form.querySelector('small');
+      const span = form.querySelector('span');
+
+      if (!emailValue) {
+
+            email.classList.add('error');
+            small.style.display = 'block';
+            span.style.display = 'none';
+
+      } else if (!isValidEmail(emailValue)) {
+
+            email.classList.add('error');
+            small.style.display = 'block';
+            span.style.display = 'none';
+
+      } else {
+
+            email.classList.remove('error');
+            small.style.display = 'none';
+            span.style.display = 'block';
+
+      }
+});
+
+function isValidEmail(email) {
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+};

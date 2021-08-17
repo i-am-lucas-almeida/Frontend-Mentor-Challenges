@@ -32,11 +32,7 @@
 
           <li>
 
-            <a href="index.html">
-
-              <img src="images/logo-bookmark-mobile.svg" id="logo-mobile">
-
-            </a>
+            <img src="images/logo-bookmark-mobile.svg" id="logo-mobile">
 
           </li>
 
@@ -308,17 +304,25 @@
 
         <h2>Stay up-to-date with what we’re doing</h2>
 
-        <form action="#">
+        <form action="#" id="form">
 
-          <fieldset class="backg-email">
+          <input type="email" name="email" id="email" placeholder="Enter your email address">
 
-            <input type="email" name="email" id="email" placeholder="Enter your email address">
+          <small> 
+            
+            <i class="fa fa-times-circle"></i> 
+            Whoops, make sure it's an email
+          
+          </small>
 
-            <small>Whoops, make sure it's an email</small>
+          <span>
 
-          </fieldset>
+            <i class="fa fa-check-circle"></i> 
+            Email is valid
 
-          <button type="button" class="btn-contact">Contact Us</button>
+          </span>
+
+          <button type="submit" class="btn-contact" id="submit">Contact Us</button>
 
         </form>
 

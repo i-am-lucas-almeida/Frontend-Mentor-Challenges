@@ -114,14 +114,14 @@ nav{
     background-color: transparent;
 }
 
-@media (max-width: 860px){
+@media (max-width: 760px){
 
     #menu{
         display: block;
     }
 
     #close{
-        width: 1.6rem;
+        width: 1.8rem;
         display: block;
         position: absolute;
         top: 45px;
@@ -188,7 +188,7 @@ nav{
 
     .nav-menu .social-medias_mobile li{
         color: #ffffff;
-        font-size: 2.5rem;
+        font-size: 3rem;
         padding: 0 20px;
         cursor: pointer;
     }
@@ -296,9 +296,14 @@ nav{
         max-width: 35rem;
     }
 
+    .btn-browser_1{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
 }
 
-@media (max-width: 450px){
+@media (max-width: 350px){
 
     .box-c_text > button{
         margin: 15px auto;
@@ -354,12 +359,16 @@ nav{
     text-align: center;
     padding: 2rem;
     cursor: pointer;
-    transition: .3s;
     z-index: 999;
 }
 
 .btn-slide:hover{
-    color: var(--SoftRed);
+    color: var(--VeryDarkBlue);
+    border-color: var(--SoftRed);
+}
+
+.activeBtn{
+    color: var(--VeryDarkBlue);
     border-color: var(--SoftRed);
 }
 
@@ -452,11 +461,18 @@ nav{
     .btn-slide{
         width: 250px;
         padding: 3rem;
-        border-bottom: 1.5px solid #80808050;
+        border-bottom: 2px solid #80808050;
     }
 
     .btn-slide:hover{
-        border-bottom: 3.5px solid var(--SoftRed);
+        border-bottom: 2px solid #80808050;
+        color: var(--VeryDarkBlue);
+        border-color: var(--SoftRed);
+    }
+    
+    .activeBtn{
+        border-bottom: 2px solid var(--SoftRed);
+        color: var(--VeryDarkBlue);
     }
 
 }
@@ -633,6 +649,7 @@ hr{
     font-size: 1.8rem;
     font-weight: 400;
     cursor: pointer;
+    padding-right: 10px;
 }
 
 .question > h3:hover{
@@ -676,12 +693,20 @@ hr{
     border-color: var(--SoftBlue);
 }
 
+@media (max-width: 450px){
+
+    .question > h3{
+        font-size: 1.7rem;
+    }
+
+}
+
 /*************************************************/
 .signUp{
     margin: 0 auto;
     max-width: 100%;
     width: 1400px;
-    padding: 50px 30px;
+    padding: 80px 30px;
     text-align: center;
     background-color: var(--SoftBlue);
     color: #ffffff;
@@ -717,29 +742,33 @@ form{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-}
-
-.backg-email{
-    margin: 0 auto;
-    max-width: 100%;
-    width: 280px;
-    background-color: transparent;
-    border-radius: 5px;
-    border: none;
-    padding: 1.5px 1.5px 25px 1.5px;
     position: relative;
 }
 
 small{
     display: none;
+    color: red;
     position: absolute;
-    bottom: 5px;
-    left: 12px;
+    bottom: -25px;
+    left: 10px;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+span{
+    display: none;
+    color: rgb(14, 250, 14);
+    position: absolute;
+    bottom: -25px;
+    left: 10px;
+    font-size: 1.4rem;
     font-style: italic;
     font-weight: 500;
 }
 
 #email{
+    margin-right: 20px;
     max-width: 100%;
     width: 280px;
     padding: 1rem;
@@ -783,12 +812,20 @@ small{
     #email{
         max-width: 100%;
         width: 280px;
+        margin-right: 0;
+        margin-bottom: 30px;
     }
     
     .btn-contact{
         max-width: 100%;
         width: 280px;
         margin: 0 auto;
+    }
+
+    small, span{
+        margin: 0 auto;
+        bottom: 50px;
+        left: 20px;
     }
 
 }
@@ -840,7 +877,7 @@ footer{
     color: var(--SoftRed);
 }
 
-@media (max-width: 900px){
+@media (max-width: 750px){
 
     .footer-c{
         display: grid;
