@@ -197,6 +197,7 @@ nav{
 
 /*************************/
 .header-c{
+    margin: 0 auto;
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -235,7 +236,7 @@ nav{
 .btn-browser_1{
     background-color: var(--SoftBlue);
     color: #ffffff;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .btn-browser_1:hover{
@@ -297,6 +298,21 @@ nav{
 
 }
 
+@media (max-width: 450px){
+
+    .box-c_text > button{
+        margin: 15px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box-c_image img{
+        padding: 0 20px;
+    }
+
+}
+
 /*************************************************/
 .freatures{
     max-width: 100%;
@@ -310,7 +326,7 @@ nav{
     margin: 0 auto;
     max-width: 100%;
     width: 1400px;
-    padding: 50px 30px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -351,13 +367,13 @@ nav{
     margin: 50px auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .slide-box_txt{
     max-width: 100%;
     width: 40rem;
-    margin-left: 30px;
+    margin-left: 100px;
     text-align: left;
 }
 
@@ -372,7 +388,15 @@ nav{
 }
 
 .slide-box_image > img{
-    width: 45rem;
+    width: 40rem;
+    max-height: 100%;
+    height: 30rem;
+}
+
+.btnInfo{
+    position: relative;
+    top: -100px;
+    left: 100px;
 }
 
 @media (max-width: 860px){
@@ -405,7 +429,13 @@ nav{
     .slide-box_image > img{
         margin: 0 auto;
         width: 35rem;
-        padding: 0 20px;
+        padding: 0;
+    }
+
+    .btnInfo{
+        position: relative;
+        top: 0px;
+        left: 0px;
     }
 
 }
@@ -431,13 +461,22 @@ nav{
 
 }
 
+@media (max-width: 450px){
+
+    .slide-box_image > img{
+        width: 30rem;
+        height: 25rem;
+    }
+
+}
+
 /******************************************************/
 .downloads{
     max-width: 100%;
     width: 800px;
     margin: 0 auto;
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px;
 }
 
 .downloads > p{
@@ -642,10 +681,15 @@ hr{
     margin: 0 auto;
     max-width: 100%;
     width: 1400px;
-    padding: 50px 0;
+    padding: 50px 30px;
     text-align: center;
     background-color: var(--SoftBlue);
     color: #ffffff;
+}
+
+.signUp-c{
+    margin: 0 auto;
+    width: 100%;
 }
 
 .signUp-c > h3{
@@ -658,7 +702,8 @@ hr{
 
 .signUp-c > h2{
     margin: 0 auto;
-    max-width: 450px;
+    max-width: 100%;
+    width: 450px;
     margin-bottom: 30px;
     font-weight: 500;
     font-size: 3rem;
@@ -731,6 +776,8 @@ small{
     form{
         margin: 0 auto;
         display: block;
+        max-width: 100%;
+        width: 300px;
     }
 
     #email{
@@ -748,11 +795,15 @@ small{
 
 /***************************************/
 footer{
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1400px;
     background-color: var(--VeryDarkBlue);
     color: #ffffff;
 }
 
 .footer-c{
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -830,7 +881,11 @@ footer{
     .slide-box_txt{
         margin: 0 auto;
         max-width: 100%;
-        width: 40rem;
+        width: 36rem;
+    }
+
+    .slide-box_txt > h3{
+        font-size: 2.5rem;
     }
 
     .subtitle{
