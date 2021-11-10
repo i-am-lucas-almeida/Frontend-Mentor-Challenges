@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --font: 'poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: url(/images/bg-intro-desktop.png);
+    background-position: center center;
+    background-size: cover;
+    background-color: var(--Red);
+    color: var(--white);
+    max-width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+    font-size: 1.6rem;
+}
+
+.container{
+    max-width: 100%;
+    width: 100rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-text{
+    max-width: 100%;
+    width: 50rem;
+}
+
+.box-text > .title{
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.box-text > p {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/**********************************************/
+
+.box-form{
+    max-width: 100%;
+    width: 45rem;
+}
+
+.form-title{
+    background-color: var(--Blue);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.box-form > form{
+    background-color: var(--white);
+    max-width: 100%;
+    padding: 3rem;
+    border-radius: 8px;
+}
+
+.box-form > form > fieldset{
+    border: none;
+    position: relative;
+}
+
+.box-form > form > fieldset > img{
+    display: none;
+    width: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.box-form > form > fieldset > .error{
+    display: none;
+    font-style: italic;
+    color: var(--Red);
+    font-size: 1rem;
+    font-weight: 600;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+}
+
+.box-form > form > fieldset > input{
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 1rem 2rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1.8px solid var(--Grayish-Blue);
+    font-family: var(--font);
+}
+
+.inputError{
+    display: block !important;
+    border-color: var(--Red) !important;
+}
+
+input::placeholder{
+    font-family: var(--font);
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+}
+
+.box-form > form > .submit-button{
+    background-color: var(--Green);
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 1.2rem;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid rgb(50, 168, 117);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.box-form > form > .submit-button:hover{
+    opacity: .8;
+}
+
+.box-form > form > p{
+    opacity: .8;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--Grayish-Blue);
+}
+
+.box-form > form > p > a{
+    color: var(--Red);
+    font-weight: 600;
+}
+
+.box-form > form > p > a:hover{
+    text-decoration: underline;
+}
+
+/*************************************************/
+@media (max-width: 768px) {
+
+    .container{
+        width: 45rem;
+        display: block;
+        text-align: center;
+    }
+
+    .box-text, .box-form{
+        width: 45rem;
+    }
+
+    .box-text > .title{
+        font-size: 4rem;
+    }
+
+    .box-text > p{
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .container{
+        padding: 2rem 1rem;
+    }
+
+    .container, .box-text, .box-form{
+        width: 40rem;
+    }
+
+    .box-text > .title{
+        font-size: 3.5rem;
+    }
+
+    .form-title{
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .container, .box-text, .box-form{
+        width: 35rem;
+    }
+
+    .box-text > .title{
+        font-size: 3rem;
+    }
+
+    .form-title{
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .container, .box-text, .box-form{
+        width: 32rem;
+    }
+
+    .box-text > .title{
+        font-size: 3rem;
+    }
+
+    .form-title{
+        font-size: 1.6rem;
+    }
+
+}

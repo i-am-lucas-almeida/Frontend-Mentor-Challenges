@@ -1,10 +1,8 @@
-
-# Guia de estilo de front-end
+# Front-end Style Guide
 
 ## Layout
 
-
-Os designs foram criados com as seguintes larguras:
+The designs were created to the following widths:
 
 - Mobile: 375px
 - Desktop: 1440px
