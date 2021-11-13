@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/style.css">
+  
+  <title>E-commerce product page</title>
+
+</head>
+
+<body>
+
+  <section class="container">
+
+    <nav>
+
+      <img src="images/icon-menu.svg" onclick="openMenu()" class="img-open_menu">
+
+      <a href="#">
+
+        <img src="images/logo.svg" class="logo">
+
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+
+        <img src="images/icon-close.svg" onclick="closeMenu()" class="img-close_menu">
+
+        <ul>
+
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+
+        </ul>
+
+      </div>
+
+      <div class="box-img">
+
+        <aside>
+
+          <img src="images/icon-cart.svg" class="cart" id="cart" onclick="openCartModal()">
+
+          <span id="cartQuant">0</span>
+
+        </aside>
+
+        <img src="images/image-avatar.png" class="img-perfil">
+
+      </div>
+
+    </nav>
+
+    <div class="container-body_flex">
+
+      <div class="box-left_img">
+
+        <img src="images/image-product-1.jpg" class="img-product" onclick="openImageModal(this)" id="imageProduct" >
+
+        <div class="img-gallery">
+
+          <img src="images/image-product-1.jpg" onclick="selectImage(this)">
+          <img src="images/image-product-2.jpg" onclick="selectImage(this)">
+          <img src="images/image-product-3.jpg" onclick="selectImage(this)">
+          <img src="images/image-product-4.jpg" onclick="selectImage(this)">
+
+        </div>
+
+      </div>
+
+      <div class="box-right_text">
+
+        <h2>Sneaker Company</h2>
+
+        <h1>Fall Limited Edition Sneakers</h1>
+
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+
+        <aside>
+
+          <h3>$250.00</h3>
+
+          <h2 class="price">$125.00<span class="descont">50%</span></h2>          
+
+        </aside>
+
+        <aside class="box-cart">
+
+          <div class="box-cart_items">
+
+            <img src="images/icon-minus.svg" id="remove">
+
+            <span class="quant-items" id="quantItem">0</span>
+
+            <img src="images/icon-plus.svg" id="add">
+
+          </div>
+
+          <button class="add-cart_items" id="buttonCheckout">
+
+            <img src="images/icon-cart-white.svg">
+            Add to cart
+
+          </button>
+
+        </aside>
+
+      </div>
+
+    </div>
+
+    <div class="modal-image" id="modalImage">
+
+      <div class="modal-image_c">
+
+        <span onclick="closeImageModal()" class="close">X</span>
+
+        <img src="" id="imageModal">
+
+      </div>
+
+    </div>
+
+    <div class="modal-cart_container" id="modalCart">
+
+      <h2>Cart</h2>
+
+      <aside id="modal-cart_empty">
+
+        <p>Your cart is empty.</p>
+
+      </aside>
+
+      <div class="modal-cart_items" id="modal-cart_items">
+
+        <aside>
+
+          <img src="images/image-product-1.jpg" class="img-product">
+  
+          <div class="cart-products_descrition">
+  
+            <p>Fall Limited Edition Sneakers</p>
+  
+            <p class="price">$125.00 x <span id="quantItem_modal">0</span> <span id="finalPrice">$00.00</span></p>
+  
+          </div>
+  
+          <img src="images/icon-delete.svg" id="deleteAll">
+  
+        </aside>
+  
+        <button class="btn-checkout">Checkout</button>
+
+      </div>
+
+    </div>
+
+  </section>
+  
+<script src="js/script.js"></script>
+
+</body>
+</html>

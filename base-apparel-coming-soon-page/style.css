@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+
+:root{
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
 }
 
 body{
@@ -9,8 +21,7 @@ body{
     background-size: cover;
     background-position: center center;
     font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
-
+    font-size: 1.6rem;
 }
 
 .container{
@@ -43,34 +54,36 @@ body{
     display: none;
 }
 
-h1{
-    color: hsl(0, 36%, 70%);
-    font-size: 50px;
+.title{
+    color: var(--Desaturated-Red);
+    font-size: 6rem;
     line-height: 1.1;
     font-weight: 200; 
     margin-bottom: 0;
+    letter-spacing: 15px;
 }
 
-h2{
-    color: hsl(0, 6%, 24%);
-    font-size: 50px;
+.subtitle{
+    color: var(--Dark-Grayish-Red);
+    font-size: 6rem;
     font-weight: 600; 
+    letter-spacing: 15px;
 }
 
 p{
-    color: hsl(0, 36%, 70%);
-    font-size: 16px;
+    color: var(--Desaturated-Red);
+    font-size: 1.6rem;
     line-height: 26px;
-    margin: 30px 0; 
+    margin: 20px 0; 
 }
 
 form{
     position: relative;
 }
 
-input{
+#inputEmail{
     background-color: transparent;
-    border: 1px solid  hsl(0, 36%, 70%);
+    border: 1.5px solid  hsl(0, 36%, 70%);
     box-shadow: 0px 0px 10px hsl(0, 36%, 70%, 0.5);
     border-radius: 50px;
     padding: 15px 30px;
@@ -79,10 +92,8 @@ input{
     height: 55px;
     outline: none;
 }
-input:focus, input:hover{
-    border: 2px solid hsl(0, 36%, 70%);
-}
-input::placeholder{
+
+#inputEmail::placeholder{
     color: hsl(0, 36%, 70%);
 }
 
@@ -104,6 +115,32 @@ button{
 button:hover{
     background-image: linear-gradient( hsl(0,36%, 70%),hsl(0,93%,68%));
 }
+
+#errorIcon{
+    display: none;
+    width: 2rem;
+    position: absolute;
+    top: 17px;
+    right: 120px;
+}
+
+form > small{
+    display: none;
+    color: var(--Soft-Red);
+    position: absolute;
+    left: 30px;
+    bottom: -18px;
+}
+
+.inputError{
+    border-color: var(--Soft-Red) !important;
+}
+
+.errorActive{
+    display: block !important;
+}
+
+/*******************************************************/
 
 @media screen and (max-width:600px)
 {
