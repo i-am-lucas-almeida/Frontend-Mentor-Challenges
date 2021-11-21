@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/26783a927a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style/style.css">
+  <title>NFT preview card component</title>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="image-c">
+
+      <img src="images/image-equilibrium.jpg" class="main-image" id="mainImage" onclick="openModalImage(this)">
+
+      <span class="img-hover"></span>
+
+      <img src="images/icon-view.svg" class="img-hover_image">
+
+    </div>
+
+    <div class="text-c">
+
+      <h2>Equilibrium #3429</h2>
+
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+
+      <aside>
+
+        <h3 class="price"> <img src="images/icon-ethereum.svg"> 0.041 ETH</h3>
+
+        <h3 class="time"> <img src="images/icon-clock.svg"> 3 days left </h3>
+
+      </aside>
+
+    </div>
+
+    <div class="perfil-c">
+
+      <img src="images/image-avatar.png" class="img-perfil">
+
+      <p>Creation of <a href="#">Jules Wyvern</a></p>
+
+    </div>
+
+  </div>
+
+  <div class="modal" id="modal" onclick="closeModalImage()">
+
+    <div>
+
+      <img src="" id="imageModal">
+
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

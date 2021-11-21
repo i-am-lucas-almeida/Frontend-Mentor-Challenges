@@ -1,6 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Spartan:wght@100;200;300;500;600;700;800;900&display=swap');
+
 :root{
     --white: #ffffff;
     --dark-gray: #111111;
     --black: #000000;
     --gray: #979797;
+    --red: #e71b1b;
+    --green: #005133;
+    --font: 'Spartan', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: var(--font);
+}
+
+img{
+    max-width: 100%;
+}
+
+/*********************************************************************/
+
+header{
+    max-width: 100%;
+    width: 140rem;
+    height: 100vh;
+    position: relative;
+}
+
+header > .box-header_image{
+    max-width: 100%;
+    width: 140rem;
+    height: 100vh;
+    position: absolute;
+}
+
+header > .box-header_image > img{
+    object-fit: cover;
+    max-width: 100%;
+    width: 140rem;
+    height: 100vh;
+}
+
+header > .box-header_text{
+    color: var(--white);
+    max-width: 100%;
+    width: 40rem;
+    position: absolute;
+    left: 8rem;
+    top: 8rem;
 }

@@ -115,7 +115,7 @@ function closeModalSucces(mn) {
 
     let modalSucces = document.getElementById(mn);
 
-    if (typeof modalSucces == 'undefined' || modalSucces ===null) return;
+    if (typeof modalSucces == 'undefined' || modalSucces === null) return;
 
     modalSucces.style.display = 'none';
     document.body.style.overflow = 'auto';

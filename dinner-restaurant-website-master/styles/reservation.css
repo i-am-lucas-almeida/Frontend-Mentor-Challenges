@@ -102,6 +102,7 @@ header{
 }
 
 .box-right_form > form > fieldset{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -124,6 +125,7 @@ header{
 }
 
 .box-right_form > form > fieldset > input{
+    max-width: 100%;
     width: 6rem;
     padding: 1.5rem 0;
     border: none;
@@ -179,7 +181,7 @@ input::placeholder{
 
 .box-right_form > form > .quant-peoples{
     margin: 10px 0;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -262,7 +264,6 @@ footer > ul > li {
     header{
         display: grid;
         justify-content: center;
-        justify-content: center;
         text-align: center;
     }
 
@@ -308,6 +309,80 @@ footer > ul > li {
     
     footer > ul{
         padding: 2rem 0;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    header{
+        padding: 2rem;
+    }
+
+    .box-right_form{
+        margin: 0 auto;
+        width: 35rem;
+        padding: 2rem;
+        transform: translateY(10%);
+    }
+
+    .box-right_form > form > fieldset > input{
+        width: 4rem;
+    }
+
+    input::placeholder{
+        font-size: 1.3rem;
+    }
+
+    .box-left_text{
+        max-width: 100%;
+        width: 35rem;
+        margin: 50px 0;
+        color: var(--white);
+    }
+
+    .box-left_text > aside{
+        padding: 0 2rem;
+    }
+    
+    .box-left_text > aside > h1{
+        font-size: 4rem;
+    }
+    
+    .box-left_text > aside > p{
+        font-size: 1.6rem;
+    }
+
+    .backg-img{
+        height: 400px;
+        background-image: none;
+    }
+    
+    .backg-img > .img-position{
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .box-right_form{
+        margin: 0 auto;
+        width: 32rem;
+        padding: 2rem;
+        transform: translateY(10%);
+    }
+
+    input::placeholder{
+        font-size: 1.3rem;
+    }
+
+    .box-left_text{
+        max-width: 100%;
+        width: 32rem;
     }
 
 }

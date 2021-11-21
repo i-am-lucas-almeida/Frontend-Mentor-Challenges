@@ -12,11 +12,9 @@ button.addEventListener('click', e => {
 
     timeValidation();
 
-    /*se tudo for válido dá reload na página (poderia chamar uma nova página).*/
-
     if (nameValidation() == true && emailValidation() == true && dateValidation() == true && timeValidation() == true) {
 
-        location.reload();
+        alert('Reservation made successfully!');
 
     }
 
@@ -26,20 +24,21 @@ function nameValidation() {
 
     const name = document.getElementById("name");
     const errorName = document.getElementById("nameError");
+    const regexName = /^[A-ZÀ-Ÿ][A-zÀ-ÿ']+\s([A-zÀ-ÿ']\s?)*[A-ZÀ-Ÿ][A-zÀ-ÿ']+$/;
 
     if (name.value == '') {
 
         name.focus();
         name.classList.add("inputError");
-        errorName.innerHTML = 'Name is required';
+        errorName.innerHTML = 'This empty is required';
         errorName.classList.add("inputError");
         name.classList.remove("inputSuccess");
     
-    } else if (name.value.length < 8) {
+    } else if (!regexName.test(name.value.toUpperCase())) {
 
         name.focus();
         name.classList.add("inputError");
-        errorName.innerHTML = 'Enter your full name';
+        errorName.innerHTML = 'Full name is invalid';
         errorName.classList.add("inputError");
         name.classList.remove("inputSuccess");
 
@@ -96,27 +95,31 @@ function dateValidation() {
     const month = document.getElementById("month");
     const day = document.getElementById("day");
     const year = document.getElementById("year");
-    const dateError = document.getElementById("dateError")
+    const dateError = document.getElementById("dateError");
+    const actualYear = new Date().getFullYear();
 
-    if (month.value == '' || month.value.length < 2 || month.value == 0 || month.value < 0 || month.value > 12) {
+    if (month.value == '' || month.value.length < 2 || month.value <= 0 || month.value > 12) {
 
         month.focus();
         month.classList.add("inputError");
         dateError.classList.add("inputError");
+        month.classList.remove("inputSuccess");
         dateError.innerHTML = 'This field is invalid';
     
-    } else if (day.value == '' || day.value.length < 2 || day.value == 0 || day.value < 0 || day.value > 31) {
+    } else if (day.value == '' || day.value.length < 2 || day.value <= 0 || day.value > 31) {
 
         day.focus();
         day.classList.add("inputError");
         dateError.classList.add("inputError");
+        day.classList.remove("inputSuccess");
         dateError.innerHTML = 'This field is invalid';
     
-    } else if (year.value == '' || year.value.length < 4 || year.value == 0 || year.value < 2021 || year.value >= 2022) {
+    } else if (year.value == '' || year.value.length < 4 || year.value <= 0 || year.value != actualYear) {
 
         year.focus();
         year.classList.add("inputError");
         dateError.classList.add("inputError");
+        year.classList.remove("inputSuccess");
         dateError.innerHTML = 'This field is invalid';
     
     } else {
@@ -124,6 +127,9 @@ function dateValidation() {
         month.classList.remove("inputError");
         day.classList.remove("inputError");
         year.classList.remove("inputError");
+        month.classList.add("inputSuccess");
+        day.classList.add("inputSuccess");
+        year.classList.add("inputSuccess");
         dateError.innerHTML = '';
         return true;
 
@@ -142,6 +148,7 @@ function timeValidation() {
         hour.focus();
         hour.classList.add("inputError");
         timeError.classList.add("inputError");
+        hour.classList.remove("inputSuccess");
         timeError.innerHTML = 'This field is invalid';
     
     } else if (minute.value == '' || minute.value.length < 2 || minute.value < 0 || minute.value > 59) {
@@ -149,12 +156,15 @@ function timeValidation() {
         minute.focus();
         minute.classList.add("inputError");
         timeError.classList.add("inputError");
+        minute.classList.remove("inputSuccess");
         timeError.innerHTML = 'This field is invalid';
     
     } else {
 
         hour.classList.remove("inputError");
         minute.classList.remove("inputError");
+        hour.classList.add("inputSuccess");
+        minute.classList.add("inputSuccess");
         timeError.innerHTML = '';
         return true;
 
