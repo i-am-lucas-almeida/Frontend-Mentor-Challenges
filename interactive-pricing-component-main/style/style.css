@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+
+:root{
+    --Soft-Cyan: #a5f3eb;
+    --Strong-Cyan: #10d5c2;
+    --Light-Grayish-Red: #feece7;
+    --Light-Red: #ff8c66;
+    --Pale-Blue: #bdccff;
+    --White: #ffffff;
+    --Very-Pale-Blue: #fafbff;
+    --Very-Light-Grayish-Blue: #eaeefb;
+    --Light-Grayish-Blue: #cdd7ee;
+    --Grayish-Blue: #858fad;
+    --Dark-Desaturated-Blue: #293356;
+    --font: 'manrope', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--Very-Light-Grayish-Blue);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: var(--font);
+    padding: 2rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+/******************************************************************/
+
+.box-title{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.box-title > img{
+    width: 13rem;
+    position: absolute;
+    right: 35%;
+    top: -35px;
+}
+
+.box-title > aside {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    z-index: 99;
+}
+
+.box-title > aside > h1{
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--Dark-Desaturated-Blue);
+}
+
+.box-title > aside > p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--Grayish-Blue);
+}
+
+/********************************************************************/
+
+.container {
+    background-color: var(--White);
+    max-width: 100%;
+    width: 48rem;
+    padding: 3rem 0;
+    border-radius: 8px;
+    box-shadow: 0px 20px 20px #858fad2a;
+}
+
+.container > .plane-values{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 3rem;
+}
+
+.plane-values > p{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--Grayish-Blue);
+}
+
+.plane-values > p > .page-views_yearly{
+    display: none;
+}
+
+.show-pageviews{
+    display: block !important;
+}
+
+.hidden-pageviews{
+    display: none;
+}
+
+.plane-values > aside{
+    display: flex;
+    align-items: center;
+}
+
+.plane-values > aside > .value-monthly,
+.plane-values > aside > .value-yearly{
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--Dark-Desaturated-Blue);
+}
+
+.plane-values > aside > .value-yearly{
+    display: none;
+}
+
+.show-value{
+    display: block !important;
+}
+
+.hidden-value{
+    display: none;
+}
+
+.plane-values > aside > .monthly,
+.plane-values > aside > .yearly{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--Grayish-Blue);
+    margin-left: 5px;
+}
+
+.plane-values > aside > .yearly{
+    display: none;
+}
+
+.show-yearly .monthly{
+    display: none;
+}
+
+.show-yearly .yearly{
+    display: block !important;
+}
+
+
+/*****************************************************************/
+
+fieldset{
+    border: none;
+    padding: 0 3rem;
+}
+
+.input-range_mobile{
+    display: none;
+}
+
+.input-range {
+    background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 50%, #eaeefb 50%, #eaeefb 100%);
+    border: none;
+    border-radius: 8px;
+    height: 8px;
+    width: 100%;
+    outline: none;
+    transition: 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.input-range:hover{
+    cursor: pointer;
+}
+
+.input-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    background-color: var(--Strong-Cyan);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 15px 15px #a5f3ebd2;
+    background-image: url(/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    z-index: 999;
+}
+
+.input-range::-webkit-slider-thumb:hover{
+    background-color: #06aa9a;
+}
+
+/******************************************************************/
+
+.box-toggle{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-toggle > aside{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+
+.box-toggle > aside > p{
+    color: var(--Grayish-Blue);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.box-toggle > aside > p > .descont{
+    background-color: var(--Light-Grayish-Red);
+    color: var(--Light-Red);
+    padding: 0 8px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-left: 5px;
+}
+
+.box-toggle > aside > label {
+	background: var(--Light-Grayish-Blue);
+	border-radius: 50px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 10px;
+	position: relative;
+	height: 25px;
+	width: 50px;
+    opacity: .8;
+}
+
+.box-toggle > aside > label:hover {
+    opacity: 1;
+}
+
+.box-toggle > aside > label > .ball {
+	background-color: var(--White);
+	border-radius: 50%;
+	position: absolute;
+	top: 2.5px;
+	left: 2.5px;
+	height: 20px;
+	width: 20px;
+	transition: transform 0.4s ease;
+}
+
+#toggle {
+	position: absolute;
+	left: -9999px;
+}
+
+input:checked + label .ball {
+	transform: translateX(25px);
+}
+
+input:checked + label{
+    background: var(--Soft-Cyan);
+}
+
+
+/******************************************************************/
+
+.box-c_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1.3px solid var(--Light-Grayish-Blue);
+    padding-top: 2rem;
+}
+
+.box-c_bottom > ul{
+    padding: 0 3rem;
+}
+
+.box-c_bottom > ul > li{
+    padding: .5rem 0;
+    color: var(--Grayish-Blue);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.box-c_bottom > ul > li > img{
+    margin-right: 10px;
+}
+
+.button-start{
+    background-color: var(--Dark-Desaturated-Blue);
+    color: var(--White);
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 3rem;
+    margin-right: 3rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.button-start:hover{
+    opacity: .9;
+}
+
+/****************************************************************************/
+
+@media (max-width: 500px) {
+
+    body{
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        width: 42rem;
+        padding: 5rem 0;
+    }
+
+    .box-title{
+        width: 100%;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+    
+    .box-title > img{
+        width: 16rem;
+        right: 25%;
+        top: -35px;
+    }
+    
+    .box-title > aside > h1{
+        font-size: 2.2rem;
+    }
+    
+    .box-title > aside > p{
+        width: 200px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+
+    .container > .plane-values{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .plane-values > aside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .plane-values > p{
+        margin: 0 auto;
+    }
+
+    .input-range_desktop{
+        display: none;
+    }
+
+    fieldset{
+        padding: 0;
+    }
+
+    .input-range_mobile{
+        display: block;
+        margin: 20px 0;
+    }
+
+    .input-range{
+        margin: 0 auto;
+        max-width: 100%;
+        width: 37rem;
+    }
+
+    .box-c_bottom{
+        display: block;
+        text-align: center;
+    }
+    
+    .box-c_bottom > ul{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    
+    .button-start{
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .container {
+        width: 37rem;
+        padding: 5rem 0;
+    }
+
+    .input-range{
+        margin: 0 auto;
+        max-width: 100%;
+        width: 32rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .container {
+        width: 35rem;
+        padding: 5rem 0;
+    }
+
+    .input-range{
+        margin: 0 auto;
+        max-width: 100%;
+        width: 30rem;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .container {
+        width: 30rem;
+        padding: 5rem 0;
+    }
+
+    .input-range{
+        margin: 0 auto;
+        max-width: 100%;
+        width: 26rem;
+    }
+
+}
