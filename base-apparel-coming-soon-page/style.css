@@ -25,7 +25,7 @@ body{
 }
 
 .container{
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
     flex-wrap: wrap;   
 }
@@ -34,14 +34,16 @@ body{
     width: 60%; 
     padding: 0 50px;
 }
+
 .inner-container{
-    max-width: 450px;
+    max-width: 100%;
+    width: 450px;
 }
 
 .box-right{
     background-image: url(images/hero-desktop.jpg);
     background-size: cover;
-    background-position: center center;
+    background-position: center left;
     width: 40%;
 }
 
@@ -142,20 +144,29 @@ form > small{
 
 /*******************************************************/
 
-@media screen and (max-width:600px)
+@media screen and (max-width: 800px)
 {
     .box-left{
+        margin: 0 auto;
         width: 100%;
+        padding: 0 20px;
         margin-bottom: 60px;
+        text-align: center;
+    }
+    
+    .inner-container{
+        margin: 0 auto;
     }
 
     .box-right{
         display: none;
     }
+
     .logo{
         margin: 40px 0;
         width: 150px;
     }
+
     h2{
         font-size: 45px;
     }
@@ -166,5 +177,19 @@ form > small{
         margin-right: -50px;
         margin-bottom: 20px;
         width: calc(100% + 100px);
+        height: 500px;
+        object-fit: cover;
     }
+}
+
+@media(max-width: 500px) {
+
+    .box-left{
+        text-align: left;
+    }
+
+    .bg-mobile{
+        height: 300px;
+    }
+
 }

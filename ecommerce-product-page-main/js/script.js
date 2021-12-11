@@ -103,16 +103,21 @@ function closeImageModal() {
 /****************************************************/
 
 const navMenu = document.getElementById("navMenu");
+const divBody =document.querySelector(".body");
 
 function openMenu() {
 
     navMenu.classList.add("activeNavMenu");
+    document.body.style.overflow = "hidden";
+    divBody.style.display = "block";
 
 };
 
 function closeMenu() {
 
     navMenu.classList.remove("activeNavMenu");
+    document.body.style.overflow = "auto";
+    divBody.style.display = "none";
 
 };
 
