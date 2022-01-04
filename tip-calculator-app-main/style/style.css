@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+    --Red: #e74c3c;
+    --Strong-cyan: #26c0ab;
+    --Very-dark-cyan: #00494d;
+    --Dark-cyan: #5e7a7d;
+    --Dark-grayish-cyan: #7f9c9f;
+    --Light-grayish-cyan: #c5e4e7;
+    --Very-light-grayish-cyan: #f4fafa;
+    --White: #ffffff;
+    --font: 'space mono', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    font-family: var(--font);
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: var(--Light-grayish-cyan);
+    font-size: 1.6rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+fieldset{
+    border: none;
+}
+
+.fieldset-center{
+    margin: 20px 0;
+}
+
+input{
+    margin-top: 5px;
+    background-color: #c5e4e78f;
+    color: #00494d;
+    font-family: var(--font);
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 100%;
+    border: 1.5px solid transparent;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: right;
+    outline: none;
+}
+
+input:focus{
+ border-color: var(--Strong-cyan);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+label{
+    color: var(--Dark-cyan);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+small{
+    display: none;
+    color: var(--Red);
+    float: right;
+    margin-top: 3px;
+}
+
+/***************************************************/
+
+.logo{
+    margin: 2rem auto;
+}
+
+.container{
+    max-width: 100%;
+    width: 650px;
+    background-color: var(--White);
+    padding: 3rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-left, .box-right{
+    max-width: 100%;
+    width: 400px;
+}
+
+/*************************************************************/
+
+.box-left{
+    margin-right: 30px;
+}
+
+aside{
+    position: relative;
+}
+
+.icon-person, .icon-dolar{
+    position: absolute;
+    bottom: 12px;
+    left: 8px;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.buttons > button{
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font);
+    font-size: 1.6rem;
+    width: 85px;
+    height: 40px;
+    margin: 3px;
+    cursor: pointer;
+    outline: none;
+    transition: .2s;
+}
+
+.buttons > button:hover{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.buttonClicked {
+    background-color: var(--Strong-cyan) !important;
+    color: var(--Very-dark-cyan) !important;
+}
+
+.buttons > input{
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 85px;
+    height: 40px;
+    text-align: center;
+}
+
+.btn-active{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.btn-calculate{
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-family: var(--font);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-calculate:hover{
+    background-color: #5ed6c6;
+}
+
+.inputError{
+    border-color: var(--Red) !important;
+}
+
+/******************************************************/
+
+.box-right{
+    background-color: var(--Very-dark-cyan);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+}
+
+.box-right_flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-right_flex-1{
+    margin-bottom: 30px;
+}
+
+.box-right_flex-2{
+    margin-bottom: 150px;
+}
+
+.box-right_flex > p{
+    font-size: 1.4rem;
+    color: var(--White);
+}
+
+.box-right_flex > p > span{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--Dark-grayish-cyan);
+}
+
+.box-right_flex > span{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--Strong-cyan);
+}
+
+.btn-reset{
+    width: 100%;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--font);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-reset:hover{
+    background-color: #5ed6c6;
+}
+
+/***************************************************************/
+
+@media (max-width: 720px) {
+
+    body{
+        min-height: 110vh;
+    }
+
+    .logo {
+        margin: 50px auto;
+    }
+
+    .container{
+        width: 350px;
+        display: block;
+    }
+    
+    .box-left, .box-right{
+        width: 350px;
+    }
+
+    .box-left{
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .box-right_flex-2{
+        margin-bottom: 50px;
+    }    
+
+    .buttons > button{
+        width: 85px;
+        margin: 5px;
+    }
+    
+    .buttons > input{
+        margin-left: 5px;
+        width: 85px;
+    }
+
+}

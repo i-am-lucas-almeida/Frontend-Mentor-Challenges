@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/style.css">
+  
+  <title>Tip calculator app</title>
+
+</head>
+
+<body>
+
+  <a href="index.html" class="logo">
+
+    <img src="images/logo.svg" alt="logo">
+
+  </a>
+
+  <div class="container">
+
+    <div class="box-left">
+
+      <fieldset>
+
+        <label>Bill</label>
+
+        <small class="error" id="errorBill"></small>
+
+        <aside>
+
+          <img src="images/icon-dollar.svg" class="icon-dolar">
+
+          <input type="text" maxlength="3" pattern="([0-9]{3})" id="valueBill">
+
+        </aside>
+
+      </fieldset>
+
+      <fieldset class="fieldset-center">
+
+        <label>Select Tip %</label>
+
+        <div class="buttons">
+
+          <button class="btn-1">5%</button>
+          <button class="btn-2">10%</button>
+          <button class="btn-3">15%</button>
+          <button class="btn-4">25%</button>
+          <button class="btn-5">50%</button>
+
+          <input type="number" id="valuePercent" placeholder="Custom">
+
+        </div>
+    
+      </fieldset>
+
+      <fieldset>
+
+        <label>Number of People</label>
+
+        <small class="error" id="errorPeople"></small>
+
+        <aside>
+
+          <img src="images/icon-person.svg" class="icon-person">
+
+          <input type="number" id="valuePeoples">
+
+        </aside>
+
+      </fieldset>
+
+      <button id="calculate" class="btn-calculate">Calculate</button>
+    
+    </div>
+
+    <div class="box-right">
+
+      <div class="box-right_flex box-right_flex-1">
+
+        <p>Tip Amount <br> <span>/ person</span></p>
+
+        <span id="tipPerson">$00.00</span>
+
+      </div>
+
+      <div class="box-right_flex box-right_flex-2">
+
+        <p>Total <br> <span>/ person</span></p>
+
+        <span id="totalTip">$00.00</span>
+
+      </div>
+
+      <button class="btn-reset" id="btnReset">Reset</button>
+
+    </div>
+
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
