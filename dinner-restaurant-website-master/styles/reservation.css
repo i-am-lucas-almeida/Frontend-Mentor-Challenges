@@ -35,7 +35,7 @@ img{
 
 header{
     background-image: url(/assets/images/booking/hero-bg-desktop.jpg);
-    background-position: center center;
+    background-position:center top;
     background-size: cover;
     background-repeat: no-repeat;
     max-width: 100%;
@@ -79,7 +79,7 @@ header{
     width: 42rem;
     height: 50rem;
     padding: 2rem 3rem;
-    transform: translateY(40%);
+    transform: translateY(200px);
     box-shadow: 0px 10px 20px #00000030;
 }
 
@@ -282,13 +282,13 @@ footer > ul > li {
     }
 
     .box-right_form{
-        margin-left: 0;
-        width: 50rem;
-        transform: translateY(30%);
+        height: 50rem;
+        transform: translateY(30px);
     }
 
     .backg-img{
         background-size: 90%;
+        padding-bottom: 50rem;
     }
 
 }
@@ -323,7 +323,6 @@ footer > ul > li {
         margin: 0 auto;
         width: 35rem;
         padding: 2rem;
-        transform: translateY(10%);
     }
 
     .box-right_form > form > fieldset > input{
@@ -373,7 +372,6 @@ footer > ul > li {
         margin: 0 auto;
         width: 32rem;
         padding: 2rem;
-        transform: translateY(10%);
     }
 
     input::placeholder{

@@ -30,35 +30,3 @@ body{
 img{
     max-width: 100%;
 }
-
-/*********************************************************************/
-
-header{
-    max-width: 100%;
-    width: 140rem;
-    height: 100vh;
-    position: relative;
-}
-
-header > .box-header_image{
-    max-width: 100%;
-    width: 140rem;
-    height: 100vh;
-    position: absolute;
-}
-
-header > .box-header_image > img{
-    object-fit: cover;
-    max-width: 100%;
-    width: 140rem;
-    height: 100vh;
-}
-
-header > .box-header_text{
-    color: var(--white);
-    max-width: 100%;
-    width: 40rem;
-    position: absolute;
-    left: 8rem;
-    top: 8rem;
-}
