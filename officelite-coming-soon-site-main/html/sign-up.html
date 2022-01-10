@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/26783a927a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style/sign-up.css">
+
+    <title>Officelite | Sign Up</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="/index.html" class="logo-mobile">
+
+            <img src="/img/shared/logo.svg" class="logo">
+
+        </a>
+
+        <div class="box-left">
+
+            <div class="box-left_text">
+
+                <a href="/index.html" class="logo-desktop">
+
+                  <img src="/img/shared/logo.svg" class="logo">
+    
+                </a>
+    
+                <h1>Work smarter. Save time.</h1>
+    
+                <p>Easily manage your projects. Get on the list and receive in-app perks available only to early subscribers. We are moving into final development and getting ready for official launch soon.</p>
+
+                <div class="countdown">
+
+                    <h2 class="date">Coming <span class="color">24 fev.</span> <span class="year">2022</span></h2>
+        
+                    <div class="box-countdown_flex">
+        
+                        <div class="box-countdown">
+                  
+                          <aside class="box-date">
+                    
+                            <span id="days"></span>
+        
+                            <p class="box-c_date">days</p>
+                    
+                          </aside>
+                    
+                        </div>
+                    
+                        <div class="box-countdown">
+                    
+                          <aside class="box-date">
+                    
+                            <span id="hours"></span>
+        
+                            <p class="box-c_date">hours</p>
+                    
+                          </aside>
+                    
+                        </div>
+                    
+                        <div class="box-countdown">
+                    
+                          <aside class="box-date">
+                    
+                            <span id="minutes"></span>
+        
+                            <p class="box-c_date">min</p>
+                    
+                          </aside>
+                    
+                        </div>
+                    
+                        <div class="box-countdown">
+                    
+                          <aside class="box-date">
+                    
+                            <span id="seconds"></span>
+        
+                            <p class="box-c_date">sec</p>
+                    
+                          </aside>
+                    
+                        </div>
+                  
+                      </div>
+        
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="box-right">
+
+          <img src="/img/home/bg-pattern-footer.svg" class="backg-img">
+
+        </div>
+
+        <div class="form">
+
+            <form action="#">
+
+                <fieldset>
+
+                    <label for="name">Name</label>
+
+                    <input type="text" maxlength="30" id="name">
+
+                </fieldset>
+
+                <fieldset>
+
+                    <label for="email">Email</label>
+
+                    <input type="email" id="email">
+
+                </fieldset>
+
+                <div class="btn-select_container" id="btnSelect">
+
+                  <span class="plane" id="plane">Basic Pack</span>
+
+                  <span class="space">-</span>
+
+                  <span class="price-plane" id="pricePlane">Free</span>
+
+                  <i class="fa fa-chevron-up chevron"></i>
+
+                </div>
+
+                <div class="select-box">
+
+                  <div class="select select-border select-1">
+
+                    <span class="plane">Basic Pack</span>
+
+                    <span class="space">-</span>
+
+                    <span class="price-plane">Free</span>
+
+                    <i class="fa fa-check check-free"></i>
+
+                  </div>
+
+                  <div class="select select-border select-2">
+
+                    <span class="plane">Pro Pack</span>
+
+                    <span class="space">-</span>
+
+                    <span class="price-plane">$9.99</span>
+
+                    <i class="fa fa-check check-pro"></i>
+
+                  </div>
+
+                  <div class="select select-3">
+
+                    <span class="plane">Ultimate Pack</span>
+
+                    <span class="space">-</span>
+
+                    <span class="price-plane">$19.99</span>
+
+                    <i class="fa fa-check check-ultimate"></i>
+
+                  </div>
+
+                </div>
+
+                <fieldset>
+
+                    <label for="phone">Phone Number</label>
+
+                    <input type="tel" id="phone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);">
+
+                </fieldset>
+
+                <fieldset>
+
+                    <label for="company">Company</label>
+
+                    <input type="text" id="company" maxlength="20">
+
+                </fieldset>
+
+                <button class="btn-submit" id="submit">Get on the list</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal">
+
+      <div class="modal-check">
+
+        <i class="fa fa-check-circle"></i>
+  
+        <h2>Thanks for signing up</h2>
+  
+        <p>We are moving into final development and getting ready for official launch soon. We will contact you soon.</p>
+  
+        <button id="closeModal">Got it</button>
+  
+      </div>
+
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/validations.js"></script>
+    <script src="/js/sign.js"></script>
+    
+</body>
+</html>

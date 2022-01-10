@@ -76,19 +76,3 @@ const timerSeconds = setInterval (function() {
     }
 
 }, 1000);
-
-//adicionar opção de input de novos valores através de janela modal.
-
-/*
-const inputDay = document.getElementById('inputDay');
-const inputBtn = document.getElementById('btn');
-
-inputBtn.addEventListener('click', function() {
-
-    daysCounter = '0' + inputDay.value;
-    days.textContent = daysCounter;
-    alert(daysCounter);
-
-});
-
-*/
