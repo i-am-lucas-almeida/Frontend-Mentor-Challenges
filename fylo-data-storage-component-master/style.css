@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 :root{
-    --Pale-Blue: hsl(243, 100%, 93%);
-    --Grayish-Blue: hsl(229, 7%, 55%);
-    --Dark-Blue: hsl(228, 56%, 26%);
-    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    --Pale-Blue: #dddbff;
+    --Grayish-Blue: #848794;
+    --Dark-Blue: #1d2c67;
+    --Very-Dark-Blue: #0c122c;
+    --animate-duration: 3s;
+    --animate-delay: 3s;
 }
 
 *{
@@ -46,7 +48,7 @@ img{
 }
 
 .logo{
-    width: 12rem;
+    width: 10rem;
     margin-bottom: 15px;
 }
 
@@ -65,7 +67,7 @@ img{
     height: 4rem;
     margin-right: 5px;
     padding: 10px 8px;
-    border-radius: 10px;
+    border-radius: 8px;
     object-fit: contain;
     cursor: pointer;
 }
@@ -101,7 +103,7 @@ img{
 
 .box-right > aside > h2{
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 progress{
@@ -128,7 +130,8 @@ progress::-webkit-progress-value {
     height: 18px;
     background: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
     border-radius: 25px;
-    border: 3px solid var(--Very-Dark-Blue)
+    border: 3px solid var(--Very-Dark-Blue);
+    position: relative;
 }
 
 .progress-circle{
@@ -137,8 +140,8 @@ progress::-webkit-progress-value {
     background-color: #ffffff;
     border-radius: 50%;
     position: absolute;
-    z-index: 1;
-    top: 68.5px;
+    z-index: 5;
+    top: 68px;
     right: 167px;
 }
 

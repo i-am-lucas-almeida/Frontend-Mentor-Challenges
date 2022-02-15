@@ -5,14 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <script src="https://kit.fontawesome.com/26783a927a.js" crossorigin="anonymous"></script>
-  <title>Bookmark landing page</title>
+
+  <title>Bookmark</title>
 
 </head>
 
 <body>
 
-  <header>
+  <header class="container">
+
+    <img src="images/bg-pattern.svg" class="bg-pattern_header">
 
     <nav>
 
@@ -28,37 +35,37 @@
 
         <ul class="menu">
 
-          <img src="images/icon-close.svg" id="close" onclick="closeMenu('navMenu')">
-
-          <li>
+          <aside>
 
             <img src="images/logo-bookmark-mobile.svg" id="logo-mobile">
 
-          </li>
+            <img src="images/icon-close.svg" id="close" onclick="closeMenu('navMenu')">
 
-          <li>Features</li>
+          </aside>
 
-          <li>Pricing</li>
+          <li>Recursos</li>
 
-          <li>Contact</li>
+          <li>Preços</li>
+
+          <li>Contato</li>
 
           <li class="btn-login">Login</li>
 
-        </ul>
+          <ul class="social-medias_mobile">
 
-        <ul class="social-medias_mobile">
-
-          <li>
-
-            <i class="fa fa-facebook-square"></i>
-
-          </li>
-
-          <li>
-
-            <i class="fa fa-twitter"></i>
-
-          </li>
+            <li>
+  
+              <i class="fa fa-facebook-square"></i>
+  
+            </li>
+  
+            <li>
+  
+              <i class="fa fa-twitter"></i>
+  
+            </li>
+  
+          </ul>
 
         </ul>
 
@@ -66,20 +73,23 @@
 
     </nav>
 
-      <div class="container header-c">
+      <div class="header-c">
 
         <div class="box-c_text">
 
-          <h1>A Simple Bookmark Manager</h1>
+          <h1>O melhor grenciador de favoritos</h1>
 
           <p>
-              A clean and simple interface to organize your favourite websites. Open a new 
-              browser tab and see your sites load instantly. Try it for free.
+            Uma interface limpa e simples para organizar seus sites favoritos. Abra uma nova guia do navegador e veja seus sites carregarem instantaneamente. Experimente Grátis.
           </p>
 
-          <button class="btn-browser_1">Get it on Chrome</button>
+          <div class="btn-browser_c">
+
+            <button class="btn-browser_1">Download para Chrome</button>
          
-          <button class="btn-browser_2"> Get it on Firefox</button>
+            <button class="btn-browser_2">Download para Firefox</button>
+
+          </div>
 
         </div><!--box-c_text-->
 
@@ -91,66 +101,62 @@
 
       </div><!--container-->
 
-    
-
   </header>
 
   <main>
 
     <section class="freatures">
 
-      <h2 class="subtitle">Features</h2>
+      <h2 class="subtitle">Recursos</h2>
 
       <p class="paragraph">
-          Our aim is to make it quick and easy for you to access your favourite websites. 
-          Your bookmarks sync between your devices so you can access them on the go.
+        Nosso objetivo é tornar rápido e fácil para você acessar seus sites favoritos. Seus favoritos são sincronizados entre seus dispositivos para que você possa acessá-los em qualquer lugar.
       </p>
 
     </section><!--freatures-->
 
     <section class="slide">
 
+      <img src="images/bg-pattern.svg" class="bg-pattern_slide">
+
       <div class="slide-buttons">
 
-        <button class="btn-slide button1">Simple Bookmarking</button>
+        <button class="btn-slide button1">Acesso Simples</button>
 
-        <button class="btn-slide button2">Speedy Searching</button>
+        <button class="btn-slide button2">Pesquisa Rápida</button>
         
-        <button class="btn-slide button3">Easy Sharing</button>
+        <button class="btn-slide button3">Compartilhamento fácil</button>
 
       </div><!--slide-buttons-->
 
       <div class="slide-box slideBox">
 
-        <div class="slide-box_image slideImage">
+        <div class="slide-box_image slideImage animate__animated">
 
           <!--<img src="images/illustration-features-tab-1.svg">-->
 
         </div><!--slide-box_image-->
 
-        <div class="slide-box_txt slideText">
+        <div class="slide-box_txt slideText animate__animated">
 
-          <!--<h3 class="h3">Bookmark in one click</h3>
+          <!--<h3 class="h3"></h3>
 
-          <p>
-            Organize your bookmarks however you like. Our simple drag-and-drop interface 
-            gives you complete control over how you manage your favourite sites.
-          </p>-->
+          <p></p>-->
 
-        </div><!--slide-box_txt-->
+          <button class="btn-info btnInfo">Saiba mais</button><!--slide-box_txt-->
 
-      </div><!--slide-box-->
-
-      <button class="btn-info btnInfo">More Info</button>
+        </div>
+        
+      </div>
 
     </section><!--slide-->
 
     <section class="downloads">
 
-      <h2 class="subtitle">Download the extension</h2>
+      <h2 class="subtitle">Baixe a extensão</h2>
 
       <p class="paragraph">
-          We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.
+        Temos mais navegadores no pipeline. Por favor, deixe-nos saber se você tem um favorito que você gostaria de priorizar.
       </p>
 
       <div class="downloads-flex">
@@ -159,13 +165,13 @@
 
           <img src="images/logo-chrome.svg">
 
-          <h3>Add to Chrome</h3>
+          <h3>Para Chrome</h3>
 
-          <h4>Minimum version 62</h4>
+          <h4>Versão 6.2.5</h4>
 
-          <hr>
+          <img src="images/bg-dots.svg" class="dots">
 
-          <button class="btn-extension">Add & Install Extension</button>
+          <button class="btn-extension">Instalar extensão</button>
 
         </aside><!--box-extension & box-extension_1-->
 
@@ -173,13 +179,13 @@
           
           <img src="images/logo-firefox.svg">
 
-          <h3>Add to Firefox</h3>
+          <h3>Para Firefox</h3>
 
-          <h4>Minimum version 55</h4>
+          <h4>Versão 5.5.1</h4>
 
-          <hr>
+          <img src="images/bg-dots.svg" class="dots">
 
-          <button class="btn-extension">Add & Install Extension</button>
+          <button class="btn-extension">Instalar extensão</button>
 
         </aside><!--box-extension & box-extension_2-->
 
@@ -187,13 +193,13 @@
 
           <img src="images/logo-opera.svg">
 
-          <h3>Add to Opera</h3>
+          <h3>Para Opera</h3>
 
-          <h4>Minimum version 46</h4>
+          <h4>Versão 4.0.6</h4>
 
-          <hr>
+          <img src="images/bg-dots.svg" class="dots">
 
-          <button class="btn-extension">Add & Install Extension</button>
+          <button class="btn-extension">Instalar extensão</button>
 
         </aside><!--box-extension & box-extension_3-->
 
@@ -203,10 +209,10 @@
 
     <section class="questions">
 
-      <h2 class="subtitle">Frequently Asked Questions</h2>
+      <h2 class="subtitle">Perguntas Frequentes</h2>
 
       <p class="paragraph">
-          Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
+        Aqui estão algumas de nossas perguntas frequentes. Se você tiver outras perguntas que gostaria de responder, sinta-se à vontade para nos enviar um e-mail.
       </p>
 
       <div class="accordion">
@@ -215,7 +221,7 @@
 
           <aside class="question">
 
-            <h3>What is Bookmark?</h3>
+            <h3>O que é Bookmark?</h3>
 
             <i class="fa fa-chevron-down"></i>
 
@@ -234,7 +240,7 @@
 
           <aside class="question">
 
-            <h3>How can I request a new browser?</h3>
+            <h3>Como usar no meu navegador?</h3>
 
             <i class="fa fa-chevron-down"></i>
 
@@ -255,7 +261,7 @@
 
           <aside class="question">
 
-            <h3>Is there a mobile app?</h3>
+            <h3>Existe um aplicativo para celular?</h3>
 
             <i class="fa fa-chevron-down"></i>
 
@@ -275,7 +281,7 @@
 
           <aside class="question">
 
-            <h3>What about other Chromium browsers?</h3>
+            <h3>E quanto a outros navegadores Chromium?</h3>
 
             <i class="fa fa-chevron-down"></i>
 
@@ -290,7 +296,7 @@
 
         </div><!--accordion-question-->
 
-        <button class="btn-info">More Info</button>
+        <button class="btn-info">Saiba mais</button>
 
       </div><!--accordion-->
 
@@ -300,29 +306,23 @@
 
       <div class="signUp-c">
 
-        <h3>35,000+ already joined</h3>
+        <h3>Mais de 35.000 já aderiram</h3>
 
-        <h2>Stay up-to-date with what we’re doing</h2>
+        <h2>Fique por dentro do que estamos fazendo</h2>
 
         <form action="#" id="form">
 
-          <input type="email" name="email" id="email" placeholder="Enter your email address">
+          <div class="input-message" id="inputMessage">
 
-          <small> 
-            
-            <i class="fa fa-times-circle"></i> 
-            Whoops, make sure it's an email
-          
-          </small>
+            <input type="email" name="email" id="email" placeholder="Informe seu email">
 
-          <span>
+            <img src="images/icon-error.svg" class="icon-error">
 
-            <i class="fa fa-check-circle"></i> 
-            Email is valid
+            <small id="message"><!--aqui fica a mensagem de erro e sucesso--></small>
 
-          </span>
+          </div>
 
-          <button type="submit" class="btn-contact" id="submit">Contact Us</button>
+          <button type="submit" class="btn-contact" id="submit">Pronto</button>
 
         </form>
 
@@ -336,21 +336,25 @@
 
     <div class="container footer-c">
 
-      <a href="index.html">
+      <div class="footer-navigation">
 
-        <img src="images/logo-bookmark-footer.svg" class="logo-footer">
-  
-      </a>
-  
-      <ul class="menu-footer">
-  
-        <li>Features</li>
-  
-        <li>Pricing</li>
-  
-        <li>Contact</li>
-  
-      </ul>
+        <a href="index.html">
+
+          <img src="images/logo-bookmark-footer.svg">
+    
+        </a>
+    
+        <ul class="menu-footer">
+    
+          <li>Recursos</li>
+    
+          <li>Preços</li>
+    
+          <li>Contato</li>
+    
+        </ul>
+
+      </div>
   
       <ul class="social-medias">
   

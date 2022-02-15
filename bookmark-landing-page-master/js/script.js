@@ -1,24 +1,16 @@
 /*NAVBAR MENU*/
 
-function openMenu (mn) {
+const navMenu = document.getElementById('navMenu');
 
-      let navMenu = document.getElementById(mn);
+function openMenu() {
 
-      if(typeof navMenu == 'undefined' || navMenu === null) return;
-
-      navMenu.style.display = 'grid';
-      menu.style.display = 'none';
+      navMenu.classList.add('nav-menu--active');
 
 }
 
-function closeMenu (mn) {
+function closeMenu() {
 
-      let navMenu = document.getElementById(mn);
-
-      if(typeof navMenu == 'undefined' || navMenu === null) return;
-
-      navMenu.style.display = 'none';
-      menu.style.display = 'block';
+      navMenu.classList.remove('nav-menu--active');
 
 }
 
@@ -63,22 +55,22 @@ const freatures = [
 
       {
             slideImage: '/images/illustration-features-tab-1.svg',
-            h3: 'Bookmark in one click',
-            slideText: 'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.',
+            h3: 'Seus favoritos em um clique',
+            slideText: 'Organize seus favoritos como quiser. Nossa interface simples de arrastar e soltar oferece controle total sobre como você gerencia seus sites favoritos.',
 
       },
 
       {
             slideImage: '/images/illustration-features-tab-2.svg',
-            h3: 'Intelligent search',
-            slideText: 'Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.',
+            h3: 'Busca Inteligente',
+            slideText: 'Nosso poderoso recurso de pesquisa ajudará você a encontrar sites salvos rapidamente. Não há necessidade de vasculhar todos os seus favoritos.',
 
       },
 
       {
             slideImage: '/images/illustration-features-tab-3.svg',
-            h3: 'Share your bookmarks',
-            slideText: 'Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.',
+            h3: 'Compartilhe seus favoritos',
+            slideText: 'Compartilhe facilmente seus favoritos e coleções com outras pessoas. Crie um link compartilhável que você pode enviar com o clique de um botão.',
 
       },
 
@@ -93,7 +85,7 @@ const navigation = () => {
       }
       slideImage.innerHTML = `<img src="${freatures[slide].slideImage}">`;
       slideText.innerHTML = `<h3 class="h3">${freatures[slide].h3}</h3>
-      <p>${freatures[slide].slideText}</p>`;
+      <p>${freatures[slide].slideText}</p> <button class="btn-info btnInfo">Saiba mais</button>`;
 
       button1.classList.add('activeBtn');
 
@@ -103,39 +95,75 @@ const navigation = () => {
 
 navigation();
 
-button1.addEventListener('click', e => {
+function removeClass() {
+
+      if(slideText.classList.contains('animate__slideInRight')) {
+
+            setTimeout(function(){
+
+                  slideText.classList.remove('animate__slideInRight');
+
+            }, 1000);
+
+      } 
+
+      if(slideImage.classList.contains('animate__slideInLeft')) {
+
+            setTimeout(function(){
+
+                  slideImage.classList.remove('animate__slideInLeft');
+
+            }, 1000);
+
+      } 
+
+}
+
+button1.addEventListener('click', () => {
 
       slideImage.innerHTML = `<img src="${freatures[0].slideImage}">`;
       slideText.innerHTML = `<h3 class="h3">${freatures[0].h3}</h3>
-      <p>${freatures[0].slideText}</p>`;
+      <p>${freatures[0].slideText}</p> <button class="btn-info btnInfo">Saiba mais</button>`;
 
       button1.classList.add('activeBtn');
       button2.classList.remove('activeBtn');
       button3.classList.remove('activeBtn');
 
+      slideText.classList.add('animate__slideInRight');
+      slideImage.classList.add('animate__slideInLeft');
+      removeClass();
+
 });
 
-button2.addEventListener('click', e => {
+button2.addEventListener('click', () => {
 
       slideImage.innerHTML = `<img src="${freatures[1].slideImage}">`;
       slideText.innerHTML = `<h3 class="h3">${freatures[1].h3}</h3>
-      <p>${freatures[1].slideText}</p>`;
+      <p>${freatures[1].slideText}</p> <button class="btn-info btnInfo">Saiba mais</button>`;
 
       button1.classList.remove('activeBtn');
       button2.classList.add('activeBtn');
       button3.classList.remove('activeBtn');
 
+      slideText.classList.add('animate__slideInRight');
+      slideImage.classList.add('animate__slideInLeft');
+      removeClass();
+
 });
 
-button3.addEventListener('click', e => {
+button3.addEventListener('click', () => {
 
       slideImage.innerHTML = `<img src="${freatures[2].slideImage}">`;
       slideText.innerHTML = `<h3 class="h3">${freatures[2].h3}</h3>
-      <p>${freatures[2].slideText}</p>`;
+      <p>${freatures[2].slideText}</p> <button class="btn-info btnInfo">Saiba mais</button>`;
 
       button1.classList.remove('activeBtn');
       button2.classList.remove('activeBtn');
       button3.classList.add('activeBtn');
+
+      slideText.classList.add('animate__slideInRight');
+      slideImage.classList.add('animate__slideInLeft');
+      removeClass();
 
 });
 
@@ -149,33 +177,38 @@ form.addEventListener('submit', e => {
 
       e.preventDefault();
 
-      const email = form['email'];
-      const emailValue = email.value;
-      const small = form.querySelector('small');
-      const span = form.querySelector('span');
+      const email = document.getElementById('email');
+      const iconError = document.querySelector('.icon-error');
+      const btnSubmit = document.getElementById('submit');
+
+      const emailValue = email.value.trim();
+      const inputMessage = document.getElementById('inputMessage');
+      const message = document.getElementById('message');
 
       if (!emailValue) {
 
-            email.classList.add('error');
-            small.style.display = 'block';
-            span.style.display = 'none';
+            inputMessage.classList.add('input-message--error');
+            iconError.classList.add('icon-error--active');
+            message.textContent = 'Informe seu email!'
 
       } else if (!isValidEmail(emailValue)) {
 
-            email.classList.add('error');
-            small.style.display = 'block';
-            span.style.display = 'none';
+            inputMessage.classList.add('input-message--error');
+            iconError.classList.add('icon-error--active');
+            message.textContent = 'Oops, esse email é inválido!'
 
-      } else {
+      } else if (isValidEmail(emailValue)) {
 
-            email.classList.remove('error');
-            small.style.display = 'none';
-            span.style.display = 'block';
+            inputMessage.classList.add('input-message--success');
+            iconError.classList.remove('icon-error--active');
+            message.textContent = 'Obrigado por se inscrever!';
+            btnSubmit.disabled = true;
+            email.disabled = true;
 
       }
 });
 
 function isValidEmail(email) {
-	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{3,}))$/;
 	return re.test(String(email).toLowerCase());
 };

@@ -11,11 +11,28 @@ const btnPercent5 = document.querySelector('.btn-5');
 const tipPerson = document.getElementById('tipPerson');
 const totalTip = document.getElementById('totalTip');
 
-const btnCalculate = document.getElementById('calculate');
 const btnReset = document.getElementById('btnReset');
 
 const errorBill = document.getElementById('errorBill');
 const errorPeople = document.getElementById('errorPeople');
+
+inputBill.addEventListener('input', () => {
+
+    calculate();
+    
+});
+
+inputPercent.addEventListener('input', () => {
+
+    calculate();
+
+});
+
+inputPerson.addEventListener('input', () => {
+
+    calculate();
+    
+});
 
 /*FOR MARK THE BUTTONS WITH CHECKED*/
 
@@ -47,36 +64,41 @@ let percent = 0;
 btnPercent1.addEventListener('click', () => {
 
     percent = 5 / 100;
+    calculate();
 
 });
 
 btnPercent2.addEventListener('click', () => {
 
     percent = 10 / 100;
+    calculate();
 
 });
 
 btnPercent3.addEventListener('click', () => {
 
     percent = 15 / 100;
+    calculate();
 
 });
 
 btnPercent4.addEventListener('click', () => {
 
     percent = 25 / 100;
+    calculate();
 
 });
 
 btnPercent5.addEventListener('click', () => {
 
     percent = 50 / 100;
+    calculate();
 
 });
 
 /*FOR VALIDATE THE FIELDS AND CALCULATE THE VALUE*/
 
-btnCalculate.addEventListener('click', () => {
+function calculate() {
 
     if(inputBill.value === '') {
 
@@ -84,7 +106,6 @@ btnCalculate.addEventListener('click', () => {
         errorBill.textContent = "Can't be empty";
 
         inputBill.classList.add('inputError');
-        inputBill.focus();
 
     } else if (inputBill.value <= 0) {
 
@@ -92,7 +113,6 @@ btnCalculate.addEventListener('click', () => {
         errorBill.textContent = 'Value not accepted';
 
         inputBill.classList.add('inputError');
-        inputBill.focus();
 
     } else if (inputBill.value != '' && inputBill.value > 0) {
 
@@ -107,7 +127,6 @@ btnCalculate.addEventListener('click', () => {
         errorPeople.textContent = "Can't be empty";
 
         inputPerson.classList.add('inputError');
-        inputPerson.focus();
 
     } else if (inputPerson.value <= 0) {
 
@@ -115,7 +134,6 @@ btnCalculate.addEventListener('click', () => {
         errorPeople.textContent = 'Not accepted';
 
         inputPerson.classList.add('inputError');
-        inputPerson.focus();
 
     } else if (inputPerson.value != '' && inputPerson.value > 0) {
 
@@ -144,20 +162,18 @@ btnCalculate.addEventListener('click', () => {
 
     }
 
-});
+}
 
 /*FOR RESET EVERYTHING*/
 
 btnReset.addEventListener('click', () => {
-
-    inputBill.focus();
 
     percent = 0;
 
     removeStyles();
 
     inputBill.value = '';
-    inputPerson.value = '';
+    inputPerson.value = 1;
     inputPercent.value = '';
 
     tipPerson.textContent = '$00.00';

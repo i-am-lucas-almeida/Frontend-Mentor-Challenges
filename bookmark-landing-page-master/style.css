@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
 
 :root{
-    --SoftBlue: hsl(231, 69%, 60%);
-    --SoftRed: hsl(0, 94%, 66%);
-    --GrayishBlue: hsl(229, 8%, 60%);
-    --VeryDarkBlue: hsl(229, 31%, 21%);
+    --SoftBlue: #5368df;
+    --SoftRed: #fa5757;
+    --GrayishBlue: #9194a1;
+    --VeryDarkBlue: #252b46;
 }
 
 *{
@@ -28,13 +28,14 @@ body{
 img{
     display: block;
     max-width: 100%;
+    object-fit: cover;
 }
 
 .container{
     margin: 0 auto;
     max-width: 100%;
-    width: 1400px;
-    padding: 50px;
+    width: 1440px;
+    padding: 5rem 10rem;
 }
 
 p{
@@ -43,7 +44,7 @@ p{
 }
 
 .subtitle{
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 500;
     margin-bottom: 30px;
 }
@@ -62,21 +63,36 @@ p{
     display: none;
 }
 
+@media(max-width: 1000px) {
+
+    .container{
+        padding: 5rem;
+    }
+
+}
+
+@media(max-width: 700px) {
+
+    .container{
+        padding: 5rem 3rem;
+    }
+
+}
+
 /************************/
 header{
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
 }
 
 .logo-header{
-    width: 15rem;
+    width: 18rem;
 }
 
 nav{
     margin: 0 auto;
-    max-width: 100%;
-    width: 1400px;
-    padding: 30px 50px;
+    width: 100%;
+    padding-bottom: 10rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -88,9 +104,10 @@ nav{
 }
 
 .nav-menu .menu li{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin-left: 40px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
     transition: .3s;
@@ -102,10 +119,10 @@ nav{
 
 .nav-menu .menu .btn-login{
     background-color: var(--SoftRed);
-    color: #ffffff;
-    padding: 1rem 2.5rem;
-    border-radius: 5px;
     border: 2px solid var(--SoftRed);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: .3s;
 }
@@ -114,28 +131,24 @@ nav{
     background-color: transparent;
 }
 
-@media (max-width: 760px){
+@media (max-width: 1000px){
 
     #menu{
         display: block;
     }
 
     #close{
-        width: 1.8rem;
+        width: 2rem;
         display: block;
-        position: absolute;
-        top: 45px;
-        right: 50px;
     }
 
     #logo-mobile{
         width: 15rem;
         display: block;
-        margin-bottom: 30px;
     }
 
     .nav-menu{
-        background-color: #252b46f3;
+        background-color: #252b46;
         position: fixed;
         top: 0;
         left: 0;
@@ -146,17 +159,27 @@ nav{
         z-index: 99999999;
     }
 
+    .nav-menu--active{
+        display: grid;
+    }
+
     .nav-menu .menu{
-        padding: 20px 50px;
+        padding: 0 2rem;
+        padding-top: 5rem;
         position: relative;
         max-width: 100%;
-        width: 40rem;
+        max-width: 100%;
+        width: 50rem;
         display: block;
         text-align: center;
     }
 
-    .nav-menu .menu li:hover{
-        color: #ffffff;
+    .nav-menu .menu > aside{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 5rem;
+        border-bottom: .8px solid #ffffff3b;
     }
     
     .nav-menu .menu li{
@@ -166,6 +189,10 @@ nav{
         text-transform: uppercase;
         padding: 2rem 0;
         border-bottom: .8px solid #ffffff3b;
+    }
+
+    .nav-menu .menu li:hover{
+        color: var(--SoftRed);
     }
 
     .nav-menu .menu .btn-login{
@@ -180,54 +207,89 @@ nav{
         color: var(--VeryDarkBlue);
     }
 
-    .nav-menu .social-medias_mobile{
+    .menu > .social-medias_mobile{
+        margin-top: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .nav-menu .social-medias_mobile li{
+    .menu > .social-medias_mobile li{
         color: #ffffff;
         font-size: 3rem;
-        padding: 0 20px;
+        margin: 0 3rem;
         cursor: pointer;
+        border: none;
+    }
+
+    .menu > .social-medias_mobile li:hover{
+        color: var(--SoftRed);
+    }
+
+}
+
+@media(max-width: 650px) {
+
+    .nav-menu .menu{
+        max-width: 100%;
+        width: 35rem;
     }
 
 }
 
 /*************************/
+
+header{
+    position: relative;
+    overflow: hidden;
+}
+
 .header-c{
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.bg-pattern_header{
+    width: 50rem;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: -1;
+    right: -100px;
+    bottom: -80px;
+}
+
 .box-c_text{
     margin-right: 20px;
     max-width: 100%;
-    width: 50rem;
+    width: 50%;
 }
 
 .box-c_text  > h1{
-    max-width: 40rem;
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
 .box-c_text  > p{
+    width: 50rem;
     font-size: 1.8rem;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
-.box-c_text > button{
-    font-size: 1.4rem;
+.btn-browser_c{
+    display: flex;
+}
+
+.btn-browser_c > button{
+    width: 25rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    padding: 1rem 2rem;
+    padding: 1.5rem;
     border: 2px solid transparent;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: .3s;
     cursor: pointer;
@@ -236,7 +298,7 @@ nav{
 .btn-browser_1{
     background-color: var(--SoftBlue);
     color: #ffffff;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .btn-browser_1:hover{
@@ -246,8 +308,8 @@ nav{
 }
 
 .btn-browser_2{
-    background-color: #f0f0f0;
-    color: #808080;
+    background-color: #e6e6e6;
+    color: gray;
     margin-right: 15px;
 }
 
@@ -256,11 +318,11 @@ nav{
     border-color: #808080;
 }
 
-.box-c_image img{
-    width: 55rem;
+.box-c_image{
+    width: 50%;
 }
 
-@media (max-width: 860px){
+@media (max-width: 1200px){
 
     .header-c{
         max-width: 100%;
@@ -268,52 +330,92 @@ nav{
         align-items: center;
         justify-content: center;
     }
+
+    .bg-pattern_header{
+        width: 60rem;
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: -1;
+        right: -100px;
+        top: 180px;
+    }
+
+    .btn-browser_c{
+        display: flex;
+        justify-content: center;
+    }
     
     .box-c_text{
-        margin: 50px auto;
-        max-width: 100%;
-        width: 50rem;
+        margin: 30px auto;
+        width: 100%;
         text-align: center;
         order: 2;
     }
 
     .box-c_text  > h1{
-        max-width: 50rem;
-        font-size: 3.5rem;
+        width: 100%;
+        font-size: 5rem;
         font-weight: 600;
         margin-bottom: 20px;
     }
 
-}
-
-@media (max-width: 600px){
-    
-    .box-c_text{
-        width: 35rem;
+    .box-c_text  > p{
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 50px;
     }
 
-    .box-c_text  > h1{
-        max-width: 35rem;
+    .box-c_image{
+        width: 100%;
     }
 
-    .btn-browser_1{
-        margin-left: 10px;
-        margin-right: 10px;
+    .box-c_image > img{
+        margin: 0 auto;
     }
 
 }
 
-@media (max-width: 350px){
+@media(max-width: 800px) {
 
-    .box-c_text > button{
-        margin: 15px auto;
-        display: flex;
+    .bg-pattern_header{
+        width: 60rem;
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: -1;
+        right: -100px;
+        top: 150px;
+    }
+
+}
+
+@media (max-width: 700px){
+
+    .bg-pattern_header{
+        width: 45rem;
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: -1;
+        right: -100px;
+        top: 120px;
+    }
+
+    .btn-browser_c{
+        display: grid;
         align-items: center;
         justify-content: center;
     }
 
-    .box-c_image img{
-        padding: 0 20px;
+    .box-c_text  > h1{
+        font-size: 4rem;
+    }
+
+    .box-c_text  > p{
+        font-size: 1.7rem;
+    }
+
+    .btn-browser_1{
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 
 }
@@ -321,24 +423,36 @@ nav{
 /*************************************************/
 .freatures{
     max-width: 100%;
-    width: 550px;
+    width: 65rem;
     margin: 0 auto;
     text-align: center;
-    padding: 30px;
+    padding: 3rem 2rem;
 }
 
 .slide{
     margin: 0 auto;
     max-width: 100%;
-    width: 1400px;
+    width: 1440px;
     padding: 30px;
+    padding-bottom: 100px;
     text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-pattern_slide{
+    width: 50rem;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: -1;
+    left: -100px;
+    bottom: 0px;
 }
 
 .slide-buttons{
     margin: 0 auto;
     max-width: 100%;
-    width: 600px;
+    width: 65rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -347,14 +461,14 @@ nav{
 
 .btn-slide{
     max-width: 100%;
-    width: 200px;
+    width: 33.3%;
     position: relative;
     bottom: -1.5px;
     background-color: transparent;
     border: none;
     border-bottom: 3.5px solid transparent;
     color: var(--GrayishBlue);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
     text-align: center;
     padding: 2rem;
@@ -381,13 +495,14 @@ nav{
 
 .slide-box_txt{
     max-width: 100%;
-    width: 40rem;
+    width: 40%;
     margin-left: 100px;
     text-align: left;
+    position: relative;
 }
 
 .slide-box_txt > h3{
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
@@ -396,20 +511,32 @@ nav{
     margin: 30px 0;
 }
 
+.slide-box_image{
+    width: 35%;
+}
+
 .slide-box_image > img{
-    width: 40rem;
-    max-height: 100%;
+    width: 100%;
     height: 30rem;
     object-fit: contain;
 }
 
 .btnInfo{
-    position: relative;
-    top: -100px;
-    left: 100px;
+    position: absolute;
+    bottom: -100px;
+    left: 0px;
 }
 
-@media (max-width: 860px){
+@media (max-width: 1000px){
+
+    .bg-pattern_slide{
+        width: 45rem;
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: -1;
+        left: -100px;
+        top: 100px;
+    }
 
     .slide-box{
         margin: 50px auto;
@@ -420,8 +547,7 @@ nav{
 
     .slide-box_txt{
         margin: 0 auto;
-        max-width: 100%;
-        width: 45rem;
+        width: 80%;
         text-align: center;
         padding: 50px 30px 0 30px;
     }
@@ -431,15 +557,17 @@ nav{
     }
 
     .slide-box_txt > button{
-        display: grid;
-        justify-content: center;
-        margin: 30px auto;
+        margin: 0px auto;
+        margin-top: 30px;
+    }
+
+    .slide-box_image{
+        width: 100%;
     }
 
     .slide-box_image > img{
+        width: 40rem;
         margin: 0 auto;
-        width: 35rem;
-        padding: 0;
     }
 
     .btnInfo{
@@ -450,7 +578,11 @@ nav{
 
 }
 
-@media (max-width: 650px){
+@media (max-width: 800px){
+
+    .bg-pattern_slide{
+        display: none;
+    }
 
     .slide-buttons{
         display: grid;
@@ -459,8 +591,19 @@ nav{
         border-bottom: 1.5px solid transparent;
     }
 
+    .slide-box_txt{
+        margin: 0 auto;
+        width: 100%;
+        padding: 50px 0px 0 0px;
+    }
+    
+    .slide-box_image > img{
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .btn-slide{
-        width: 250px;
+        width: 300px;
         padding: 3rem;
         border-bottom: 2px solid #80808050;
     }
@@ -478,28 +621,18 @@ nav{
 
 }
 
-@media (max-width: 450px){
-
-    .slide-box_image > img{
-        width: 30rem;
-        height: 25rem;
-    }
-
-}
-
 /******************************************************/
 .downloads{
-    max-width: 100%;
-    width: 800px;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
-    padding: 30px 20px;
+    padding: 0 20px;
 }
 
 .downloads > p{
     margin: 0 auto;
     max-width: 100%;
-    width: 550px;
+    width: 65rem;
     margin-bottom: 80px;
 }
 
@@ -509,6 +642,7 @@ nav{
 }
 
 .box-extension{
+    width: 25rem;
     margin: 0 10px;
     padding: 30px 0 15px 0;
     text-align: center;
@@ -516,16 +650,21 @@ nav{
     border-radius: 10px;
 }
 
+.box-extension > .dots{
+    width: 100%;
+    padding-top: 15px;
+}
+
 .box-extension_1{
-    transform: translateY(-10%);
+    transform: translateY(-30px);
 }
 
 .box-extension_2{
-    transform: translateY(2%);
+    transform: translateY(0);
 }
 
 .box-extension_3{
-    transform: translateY(12%);
+    transform: translateY(30px);
 }
 
 .box-extension > img{
@@ -547,20 +686,14 @@ nav{
     font-weight: 400;
 }
 
-hr{
-    border: transparent;
-    border-top: 3px solid #80808050;
-    border-style: dotted;
-}
-
 .btn-extension{
     margin: 0 20px;
-    margin-top: 20px;
     background-color: var(--SoftBlue);
     color: #ffffff;
     font-size: 1.2rem;
-    font-weight: 600;
-    border-radius: 5px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 8px;
     border: 2px solid transparent;
     padding: 1rem 2rem;
     cursor: pointer;
@@ -573,7 +706,14 @@ hr{
     color: var(--SoftBlue);
 }
 
-@media (max-width: 750px){
+@media (max-width: 900px){
+
+    .downloads{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 20px;
+    }
 
     .downloads-flex{
         display: grid;
@@ -584,16 +724,16 @@ hr{
     .box-extension{
         max-width: 100%;
         width: 30rem;
+        margin: 0;
     }
 
     .box-extension_1{
         transform: translateY(0);
-        margin-bottom: 30px;
     }
     
     .box-extension_2{
         transform: translateY(0);
-        margin-bottom: 30px;
+        margin: 30px auto;
     }
     
     .box-extension_3{
@@ -605,8 +745,8 @@ hr{
 .questions{
     margin: 0 auto;
     max-width: 100%;
-    width: 600px;
-    padding: 100px 30px;
+    width: 65rem;
+    padding: 100px 0;
 }
 
 .questions > h2{
@@ -617,8 +757,7 @@ hr{
 
 .questions > p{
     margin: 0 auto;
-    max-width: 100%;
-    width: 500px;
+    width: 100%;
     text-align: center;
     margin-bottom: 70px;
 }
@@ -632,6 +771,11 @@ hr{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion-question:hover >  .question{
+    color: var(--SoftRed);
 }
 
 .fa-chevron-down{
@@ -651,10 +795,6 @@ hr{
     font-weight: 400;
     cursor: pointer;
     padding-right: 10px;
-}
-
-.question > h3:hover{
-    color: var(--SoftRed);
 }
 
 .active .question > h3{
@@ -683,7 +823,7 @@ hr{
     font-size: 1.4rem;
     padding: 1rem 2rem;
     border: 2px solid transparent;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: .3s;
 }
@@ -692,6 +832,14 @@ hr{
     background-color: transparent;
     color: var(--SoftBlue);
     border-color: var(--SoftBlue);
+}
+
+@media (max-width: 900px){
+
+    .questions{
+        padding: 100px 2rem;
+    }
+
 }
 
 @media (max-width: 450px){
@@ -706,8 +854,8 @@ hr{
 .signUp{
     margin: 0 auto;
     max-width: 100%;
-    width: 1400px;
-    padding: 80px 30px;
+    width: 1440px;
+    padding: 80px 0;
     text-align: center;
     background-color: var(--SoftBlue);
     color: #ffffff;
@@ -721,7 +869,7 @@ hr{
 .signUp-c > h3{
     margin-bottom: 30px;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 5px;
 }
@@ -729,68 +877,89 @@ hr{
 .signUp-c > h2{
     margin: 0 auto;
     max-width: 100%;
-    width: 450px;
+    width: 50rem;
     margin-bottom: 30px;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 45px;
 }
 
 form{
     max-width: 100%;
-    width: 430px;
+    width: 450px;
     margin: 0 auto;
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     justify-content: center;
     position: relative;
 }
 
-small{
-    display: none;
-    color: red;
-    position: absolute;
-    bottom: -25px;
-    left: 10px;
-    font-size: 1.4rem;
-    font-style: italic;
-    font-weight: 500;
-}
-
-span{
-    display: none;
-    color: rgb(14, 250, 14);
-    position: absolute;
-    bottom: -25px;
-    left: 10px;
-    font-size: 1.4rem;
-    font-style: italic;
-    font-weight: 500;
-}
-
 #email{
-    margin-right: 20px;
+    visibility: visible !important;
     max-width: 100%;
-    width: 280px;
-    padding: 1rem;
+    width: 300px;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    font-family: inherit;
     border: 2px solid transparent;
     border-radius: 5px;
     outline: none;
+    position: relative;
 }
 
-::placeholder{
-    font-family: 'rubik', sans-serif;
-    color: #808080;
+.icon-error{
+    visibility: hidden;
+    position: absolute;
+    margin: auto;
+    top: 15px;
+    right: 15px;
+}
+
+#email::placeholder{
+    font-family: inherit;
+    color: var(--GrayishBlue);
+}
+
+.input-message{
+    visibility: hidden;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    position: relative;
+    padding: 2px 2px 2.3rem 2px;
+}
+
+.input-message > small{
+    position: absolute;
+    bottom: 3px;
+    left: 15px;
+    font-style: italic;
+}
+
+.icon-error--active{
+    visibility: visible;
+}
+
+.input-message--error{
+    visibility: visible;
+    background-color: var(--SoftRed);
+}
+
+.input-message--success{
+    visibility: visible;
+    background-color: #00c000;
 }
 
 .btn-contact{
     background-color: var(--SoftRed);
     color: #ffffff;
-    font-weight: 600;
-    font-size: 1.4rem;
-    padding: 1rem 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.2rem 2rem;
     border: 2px solid transparent;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: .3s;
 }
@@ -803,6 +972,15 @@ span{
 
 @media(max-width: 600px){
 
+    .signUp-c{
+        padding: 0 2rem;
+    }
+
+    .signUp-c > h2{
+        width: 100%;
+        font-size: 3.5rem;
+    }
+
     form{
         margin: 0 auto;
         display: block;
@@ -812,21 +990,22 @@ span{
 
     #email{
         max-width: 100%;
-        width: 280px;
+        width: 300px;
         margin-right: 0;
-        margin-bottom: 30px;
     }
     
     .btn-contact{
         max-width: 100%;
-        width: 280px;
+        width: 300px;
         margin: 0 auto;
+        padding: 1rem;
     }
 
-    small, span{
-        margin: 0 auto;
-        bottom: 50px;
-        left: 20px;
+    
+    .input-message{
+        visibility: visible;
+        margin-bottom: 10px;
+        margin-right: 0;
     }
 
 }
@@ -835,7 +1014,7 @@ span{
 footer{
     margin: 0 auto;
     max-width: 100%;
-    width: 1400px;
+    width: 1440px;
     background-color: var(--VeryDarkBlue);
     color: #ffffff;
 }
@@ -848,13 +1027,21 @@ footer{
     padding: 30px 50px;
 }
 
+.footer-navigation{
+    display: flex;
+    align-items: center;
+}
+
 .menu-footer{
     display: flex;
+    padding-left: 5rem;
 }
 
 .menu-footer li{
     margin: 0 20px;
     text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
     cursor: pointer;
     transition: .3s;
 }
@@ -869,7 +1056,7 @@ footer{
 
 .social-medias li > .fa{
     font-size: 2.5rem;
-    padding-left: 30px;
+    margin-left: 30px;
     cursor: pointer;
     transition: .3s;
 }
@@ -878,7 +1065,7 @@ footer{
     color: var(--SoftRed);
 }
 
-@media (max-width: 750px){
+@media (max-width: 850px){
 
     .footer-c{
         display: grid;
@@ -887,39 +1074,44 @@ footer{
         padding: 50px;
     }
 
+    .footer-navigation{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-c > a > img{
+        margin: 0 auto;
+        text-align: center;
+    }
+
     .menu-footer{
         display: block;
         text-align: center;
-        margin: 30px 0;
+        margin: 30px auto;
+        padding-left: 0;
     }
     
     .menu-footer li{
-        margin: 20px 0;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: .3s;
+        margin: 30px auto;
+    }
+
+    .social-medias li > .fa{
+        margin-left: 0px;
+        margin: 0 20px;
     }
 }
 
 /********************************/
 @media (max-width: 500px){
 
-    nav{
-        padding: 30px;
-    }
-
-    .nav-menu .social-medias_mobile{
-        margin-bottom: 200px;
-    }
-
     .box-c_text > h1{
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .slide-box_txt{
         margin: 0 auto;
-        max-width: 100%;
-        width: 36rem;
+        width: 100%;
     }
 
     .slide-box_txt > h3{
@@ -927,7 +1119,7 @@ footer{
     }
 
     .subtitle{
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
 }

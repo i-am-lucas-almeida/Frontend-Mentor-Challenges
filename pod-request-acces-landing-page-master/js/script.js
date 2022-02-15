@@ -1,40 +1,52 @@
-const form = document.getElementById('form');
+const btnSubmit = document.getElementById('submit');
+const email = document.getElementById('email');
 
-form.addEventListener('submit', e => {
+btnSubmit.addEventListener('click', e => {
+
 	e.preventDefault();
 
-	const email = form['email'];
-	const emailValue = email.value;
-	const small = form.querySelector('small');
-	const span = form.querySelector('span');
-
-
-	if (!emailValue) {
-
-		//quando campo está em branco
-		email.classList.add('error');
-		small.innerText = 'Oops! Please check your email';
-		small.style.display = 'block';
-
-	} else if (!isValidEmail(emailValue)) {
-
-		//quando email é inválido
-		email.classList.add('error');
-		small.innerText = 'Email is invalid!';
-		small.style.display = 'block';
-
-	} else {
-
-		//quando email é válido
-		email.classList.remove('error');
-		small.innerText = '';
-		span.innerText = '✓ Email is valid!';
-		span.style.display = 'block';
-	}
+	emailValidation();
 
 });
 
+function emailValidation() {
+
+	const emailValue = email.value.trim();
+
+	if(emailValue === '') {
+
+		setErrorFor(email, 'This field cannot be blank');
+		email.focus();
+
+	} else if (!isValidEmail(emailValue)) {
+
+		setErrorFor(email, 'Oops! This email is invalid');
+
+	} else {
+
+		setSuccessFor(email, 'Thanks for signing up');
+		email.disabled = true;
+		return true;
+
+	}
+
+};
+
+function setErrorFor(input, message) {
+
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'box-message error';
+	small.innerText = message;
+}
+
+function setSuccessFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'box-message success';
+	small.innerText = message;
+}
+	
 function isValidEmail(email) {
-	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(String(email).toLowerCase());
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{3,}))$/.test(email);
 }
