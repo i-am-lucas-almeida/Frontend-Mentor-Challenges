@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/variables.css">
+    <link rel="stylesheet" href="/styles/location.css">
+
+    <script src="https://kit.fontawesome.com/26783a927a.js" crossorigin="anonymous"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+    <title>Galeria de Belas Artes | Localização</title>
+
+</head>
+
+<body>
+
+    <header class='header_container'>
+
+        <div class='header_btn'>
+
+            <a href="/index.html" class="btn_container btn-c_location">
+
+                <div class="btn-arrow">
+
+                    <img src="/assets/icons/icon-arrow-left.svg">
+
+                </div>
+
+                <p class="btn-text">Voltar para a home</p>
+
+            </a>
+
+        </div>
+
+        <div class="map-c" id="map"></div>
+
+    </header>
+
+    <section class='location_container'>
+
+        <aside>
+
+            <h2>Nossa <br/> Localização</h2>
+
+        </aside>
+
+        <div class='box_local'>
+
+            <h3>1578 Av. Paulista</h3>
+
+            <p> 
+                Bela Vista <br/>
+                01310-200 <br/>
+                São Paulo <br/>
+                <br/>
+                Nossa galeria está localizada no coração da Avenida Paulista. A Galeria de Belas Artes é gratuita para todos os visitantes e está aberta sete dias por semana, das 8h às 21h.
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer class='footer_container footer_location'>
+
+        <a href="index.html">
+
+            <h3 class='footer_logo'>
+
+                galeria de <br/> belas artes
+
+            </h3>
+
+        </a>
+
+        <div class='footer_paragraph'>
+
+            <p>
+                A Galeria de Belas Artes é gratuita para todos os visitantes e está aberta sete dias por semana, das 8h às 21h. Encontre-nos na 1578 da Bela Vista, Av.Paulista, SP.
+            </p>
+
+        </div>
+
+        <ul class='social_container'>
+
+            <li class="icon_location">
+                <i class="fa fa-facebook-square"></i>
+            </li>
+
+            <li class="icon_location">
+                <i class="fa fa-instagram"></i>
+            </li>
+
+            <li class="icon_location">
+                <i class="fa fa-twitter"></i>
+            </li>
+
+        </ul>
+
+    </footer>
+
+    <script src="/js/map.js"></script>
+    
+</body>
+</html>

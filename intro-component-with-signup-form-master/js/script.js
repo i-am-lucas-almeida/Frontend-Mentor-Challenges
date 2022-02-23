@@ -1,81 +1,55 @@
-const button = document.getElementById("button");
+const btnSubmit = document.getElementById('submit');
+const fullName = document.getElementById('fullName');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password_2 = document.getElementById('password_2');
 
-button.addEventListener('click', (event) => {
+const rules = document.getElementById('rules');
 
-    event.preventDefault();
+const modalSuccess = document.getElementById('modalSuccess');
+const modalCheck = document.querySelector('.modal-check');
 
-    const firstName = document.getElementById("firstName");
-    const lastName = document.getElementById("lastName");
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
-    const errorNameIcon = document.getElementById("errorNameIcon");
-    const errorNameMessage = document.getElementById("errorNameMessage");
-    const errorLastNameIcon = document.getElementById("errorLastNameIcon");
-    const errorLastNameMessage = document.getElementById("errorLastNameMessage");
-    const errorEmailIcon = document.getElementById("errorEmailIcon");
-    const errorEmailMessage = document.getElementById("errorEmailMessage");
-    const errorPasswordIcon = document.getElementById("errorPasswordIcon");
-    const errorPasswordMessage = document.getElementById("errorPasswordMessage");
+/* CALL THE FUNCTIONS */
 
-    if (firstName.value == '' || firstName.value.length < 3) {
+fullName.addEventListener('input', () => {
 
-        firstName.classList.add("inputError");
-        errorNameIcon.classList.add("inputError");
-        errorNameMessage.classList.add("inputError");
-        firstName.focus();
+	nameValidation();
 
-    } else{
+});
 
-        firstName.classList.remove("inputError");
-        errorNameIcon.classList.remove("inputError");
-        errorNameMessage.classList.remove("inputError");
+email.addEventListener('input', () => {
 
-    }
+	emailValidation();
 
-    if (lastName.value == '' || lastName.value.length < 4) {
+});
 
-        lastName.classList.add("inputError");
-        errorLastNameIcon.classList.add("inputError");
-        errorLastNameMessage.classList.add("inputError");
-        lastName.focus();
+password.addEventListener('input', () => {
 
-    } else{
+	passwordValidation();
 
-        lastName.classList.remove("inputError");
-        errorLastNameIcon.classList.remove("inputError");
-        errorLastNameMessage.classList.remove("inputError");
+});
 
-    }
+password_2.addEventListener('input', () => {
 
-    if (email.value == '' || email.value.indexOf(".") == (-1) || email.value.indexOf("@") == (-1) || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) {
+	confirmPassword();
 
-        email.classList.add("inputError");
-        errorEmailIcon.classList.add("inputError");
-        errorEmailMessage.classList.add("inputError");
-        document.getElementsByName("email")[0].placeholder = 'email@example.com';
-        email.focus();
+});
 
-    } else{
+btnSubmit.addEventListener('click', e => {
 
-        email.classList.remove("inputError");
-        errorEmailIcon.classList.remove("inputError");
-        errorEmailMessage.classList.remove("inputError");
+	e.preventDefault();
 
-    }
+	if(nameValidation() === true && emailValidation() === true && passwordValidation() === true && confirmPassword() === true) {
 
-    if (password.value == '' || password.value.length < 6) {
+		document.body.style.overflow = 'hidden';
+		modalSuccess.style.display = 'grid';
+        
+        setInterval(function() {
 
-        password.classList.add("inputError");
-        errorPasswordIcon.classList.add("inputError");
-        errorPasswordMessage.classList.add("inputError");
-        password.focus();
+			window.location.reload();
 
-    } else{
+        }, 5000);
 
-        password.classList.remove("inputError");
-        errorPasswordIcon.classList.remove("inputError");
-        errorPasswordMessage.classList.remove("inputError");
-
-    }
+	}
 
 });

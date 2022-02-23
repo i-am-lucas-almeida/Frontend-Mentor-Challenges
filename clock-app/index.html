@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>Clock App</title>
+
+</head>
+
+<body>
+
+    <div class="container" id="backgImage">
+
+        <div class="quote-c">
+
+            <aside>
+
+                <p id="quote"></p>
+                <h3 id="author"></h3>
+
+            </aside>
+
+            <img src="images/desktop/icon-refresh.svg" id="btnQuote">
+
+        </div>
+
+        <div class="container-flex">
+
+            <div class="box-left">
+
+                <p class="teste"></p>
+
+                <div class="day-c">
+    
+                    <img src="" class="icon-day">
+        
+                    <h2 class="day-status">Tenha <span  id="dayStatus"></span></h2>
+        
+                </div>
+        
+                <div class="hour-c">
+        
+                    <h1 class="hour"><span id="hour"></span>:<span id="minutes"></span></h1>
+        
+                    <h2 class="hour-status" id="hourStatus"></h2>
+        
+                </div>
+    
+            </div>
+    
+            <div class="box-right">
+    
+                <button class="button-c" id="moreBtn">
+                    
+                    <span class="btn-text">mais</span>
+                    <img src="images/desktop/icon-arrow-up.svg" class="icon-arrow">
+                
+                </button>
+    
+            </div>
+
+        </div>
+
+        <div class="more-c" id="more">
+
+            <div>
+
+                <aside>
+
+                    <h3>Fuso horário atual</h3>
+    
+                    <h2 class="timezone"></h2>
+    
+                </aside>
+    
+                <aside class="right">
+    
+                    <h3>Dia da semana</h3>
+    
+                    <h2 class="day-week" id="dayWeek"></h2>
+    
+                </aside>
+    
+                <aside>
+    
+                    <h3>Dia do ano</h3>
+    
+                    <h2 class="day-year"></h2>
+    
+                </aside>
+    
+                <aside class="right">
+    
+                    <h3>Semana do ano</h3>
+    
+                    <h2 class="week-year"></h2>
+    
+                </aside>
+
+            </div>
+    
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>

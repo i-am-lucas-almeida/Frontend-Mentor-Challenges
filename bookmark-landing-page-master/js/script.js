@@ -26,16 +26,15 @@ this.addEventListener('DOMContentLoaded', () => {
 
                   question.parentNode.classList.toggle('active');
 
+            } else{
+
+                  questions.forEach(question => question.parentNode.classList.remove('active'));
+
+                  question.parentNode.classList.add('active');
+
             }
 
-      else{
-
-            questions.forEach(question => question.parentNode.classList.remove('active'));
-
-            question.parentNode.classList.add('active');
-      }
-
-      }))
+      }));
 
 });
 
@@ -85,7 +84,7 @@ const navigation = () => {
       }
       slideImage.innerHTML = `<img src="${freatures[slide].slideImage}">`;
       slideText.innerHTML = `<h3 class="h3">${freatures[slide].h3}</h3>
-      <p>${freatures[slide].slideText}</p> <button class="btn-info btnInfo">Saiba mais</button>`;
+      <p>${freatures[slide].slideText}</p> <button class="btn-info btnInfo">Mais Informações</button>`;
 
       button1.classList.add('activeBtn');
 
@@ -97,11 +96,11 @@ navigation();
 
 function removeClass() {
 
-      if(slideText.classList.contains('animate__slideInRight')) {
+      if(slideText.classList.contains('animate__fadeIn')) {
 
             setTimeout(function(){
 
-                  slideText.classList.remove('animate__slideInRight');
+                  slideText.classList.remove('animate__fadeIn');
 
             }, 1000);
 
@@ -123,13 +122,13 @@ button1.addEventListener('click', () => {
 
       slideImage.innerHTML = `<img src="${freatures[0].slideImage}">`;
       slideText.innerHTML = `<h3 class="h3">${freatures[0].h3}</h3>
-      <p>${freatures[0].slideText}</p> <button class="btn-info btnInfo">Saiba mais</button>`;
+      <p>${freatures[0].slideText}</p> <button class="btn-info btnInfo">Mais Informações</button>`;
 
       button1.classList.add('activeBtn');
       button2.classList.remove('activeBtn');
       button3.classList.remove('activeBtn');
 
-      slideText.classList.add('animate__slideInRight');
+      slideText.classList.add('animate__fadeIn');
       slideImage.classList.add('animate__slideInLeft');
       removeClass();
 
@@ -139,13 +138,13 @@ button2.addEventListener('click', () => {
 
       slideImage.innerHTML = `<img src="${freatures[1].slideImage}">`;
       slideText.innerHTML = `<h3 class="h3">${freatures[1].h3}</h3>
-      <p>${freatures[1].slideText}</p> <button class="btn-info btnInfo">Saiba mais</button>`;
+      <p>${freatures[1].slideText}</p> <button class="btn-info btnInfo">Mais Informações</button>`;
 
       button1.classList.remove('activeBtn');
       button2.classList.add('activeBtn');
       button3.classList.remove('activeBtn');
 
-      slideText.classList.add('animate__slideInRight');
+      slideText.classList.add('animate__fadeIn');
       slideImage.classList.add('animate__slideInLeft');
       removeClass();
 
@@ -155,13 +154,13 @@ button3.addEventListener('click', () => {
 
       slideImage.innerHTML = `<img src="${freatures[2].slideImage}">`;
       slideText.innerHTML = `<h3 class="h3">${freatures[2].h3}</h3>
-      <p>${freatures[2].slideText}</p> <button class="btn-info btnInfo">Saiba mais</button>`;
+      <p>${freatures[2].slideText}</p> <button class="btn-info btnInfo">Mais Informações</button>`;
 
       button1.classList.remove('activeBtn');
       button2.classList.remove('activeBtn');
       button3.classList.add('activeBtn');
 
-      slideText.classList.add('animate__slideInRight');
+      slideText.classList.add('animate__fadeIn');
       slideImage.classList.add('animate__slideInLeft');
       removeClass();
 
@@ -187,9 +186,10 @@ form.addEventListener('submit', e => {
 
       if (!emailValue) {
 
+            email.focus();
             inputMessage.classList.add('input-message--error');
             iconError.classList.add('icon-error--active');
-            message.textContent = 'Informe seu email!'
+            message.textContent = 'Esse campo é obrigatório!'
 
       } else if (!isValidEmail(emailValue)) {
 

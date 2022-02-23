@@ -34,7 +34,7 @@ actual_year.textContent = getYear;
 const about = document.getElementById('about');
 const creations = document.getElementById('creations');
 
-window.addEventListener("scroll", function (event) {
+window.addEventListener("scroll", function () {
 
     var scroll_position = this.scrollY;
     console.log(scroll_position);

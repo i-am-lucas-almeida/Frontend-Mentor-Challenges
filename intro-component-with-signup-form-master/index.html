@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/style.css">
-  
-  <title>Intro component with sign up form</title>
+  <script src="https://kit.fontawesome.com/26783a927a.js" crossorigin="anonymous"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <title>Formulário de Inscrição com validações</title>
 
 </head>
 
@@ -26,59 +31,88 @@
 
       <h2 class="form-title"><b>Try it free 7 days</b> then $20/mo. thereafter</h2>
 
-      <form action="#">
+      <form action="#" name="form" class="form">
 
-        <fieldset>
+        <div class="form-control">
+          
+          <input type="text" name="name" placeholder="Alex Davis" id="fullName" maxlength="30">
 
-          <input type="text" name="firstName" id="firstName" placeholder="First Name">
+          <i class="fa fa-check-circle"></i>
 
-          <img src="images/icon-error.svg" id="errorNameIcon">
+          <i class="fa fa-exclamation-circle"></i>
 
-          <span class="error" id="errorNameMessage">First Name cannot be empty</span>
+          <small>Error Message!</small>
 
-        </fieldset>
+        </div>
 
-        <fieldset>
+        <div class="form-control">
+          
+          <input type="email" name="email" placeholder="alexdavis@example.com" id="email">
 
-          <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+          <i class="fa fa-check-circle"></i>
 
-          <img src="images/icon-error.svg" id="errorLastNameIcon">
+          <i class="fa fa-exclamation-circle"></i>
 
-          <span class="error" id="errorLastNameMessage">Last Name cannot be empty</span>
+          <small>Error Message!</small>
 
-        </fieldset>
+        </div>
 
-        <fieldset>
+        <div class="form-control">
 
-          <input type="email" name="email" id="email" placeholder="Email Address">
+          <div class="password-rules" id="rules">
 
-          <img src="images/icon-error.svg" id="errorEmailIcon">
+            <p>
+              Enter a combination of at least 8 characters with: numbers, letters and symbols (such as !%$*&@#)
+            </p>
 
-          <span class="error" id="errorEmailMessage">Looks like this is not an email</span>
+          </div>
+            
+          <input type="password" placeholder="Your password" id="password" minlength="8" maxlength="30">
 
-        </fieldset>
+          <i class="fa fa-check-circle"></i>
 
-        <fieldset>
+          <i class="fa fa-exclamation-circle"></i>
 
-          <input type="password" name="password" id="password" placeholder="Password">
+          <small>Error Message!</small>
 
-          <img src="images/icon-error.svg" id="errorPasswordIcon">
+        </div>
 
-          <span class="error" id="errorPasswordMessage">Password cannot be empty</span>
+        <div class="form-control">
+          
+          <input type="password" placeholder="Confirm the password" id="password_2" minlength="8" maxlength="30">
 
-        </fieldset>
+          <i class="fa fa-check-circle"></i>
 
-        <input type="submit" value="Claim your free trial" class="submit-button" id="button">
+          <i class="fa fa-exclamation-circle"></i>
+
+          <small>Error Message!</small>
+
+        </div>
+
+        <input type="submit" name="submit" value="Claim your free trial" class="btn-submit" id="submit">
 
         <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
 
-      </form>
+    </form>
 
     </div>
 
   </section>
+
+  <div class="modal-success" id="modalSuccess">
+
+    <div class="modal-check animate__animated animate__bounce">
+
+      <i class="fa fa-check-circle"></i>
+
+      <h2>Thanks for signing up</h2>
+
+    </div>
+
+  </div>
   
   <script src="js/script.js"></script>
+  <script src="js/validations.js"></script>
 
 </body>
 </html>

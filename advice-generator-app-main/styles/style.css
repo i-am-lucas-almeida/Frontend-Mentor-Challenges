@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;800&display=swap');
+
+:root{
+    --Light-Cyan: #cee3e9;
+    --Neon-Green: #52ffa8;
+    --Very-Dark-Grayish-Blue: #202632;
+    --Dark-Grayish-Blue: #323a49;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    color: var(--Light-Cyan);
+    font-size: 1.6rem;
+    font-family: 'Manrope', sans-serif;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.container{
+    display: grid;
+    align-items: center;
+    background-color: var(--Dark-Grayish-Blue);
+    max-width: 100%;
+    width: 50rem;
+    min-height: 30rem;
+    border-radius: 12px;
+    padding: 5rem 3rem;
+    text-align: center;
+    position: relative;
+}
+
+h2{
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin: 30px auto;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: var(--Neon-Green);
+    padding: 1.5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: -50px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button:hover{
+    box-shadow: 0px 0px 35px #52ffa9c5;
+}
+
+@media(max-width: 550px) {
+
+    .container{
+        width: 40rem;
+    }    
+
+}
+
+@media(max-width: 420px) {
+
+    .container{
+        width: 35rem;
+    }   
+    
+    h1{
+        font-size: 2rem;
+    }
+
+}
