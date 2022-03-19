@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Github user search</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1 class="animate__animated animate__rubberBand">devfinder</h1>
+
+            <label for="toggleTheme" class="btn-theme" id="btnTheme">
+
+                <span class="theme-name">light</span>
+    
+                <img src="images/icon-moon.svg" class="img-dark img-theme--toggle">
+                <img src="images/icon-sun.svg" class="img-light">
+
+            </label>
+
+            <input type="checkbox" name="toggleTheme" id="toggleTheme">
+
+        </header>
+
+        <form action="#">
+
+            <img src="images/icon-search.svg" class="img-search">
+
+            <small class="error-message animate__animated animate__headShake">Please, enter a name</small>
+
+            <input type="search" name="search" id="userSearch" class="user-search" placeholder="Search Github username..." required>
+    
+            <input type="button" value="Search" id="btnSearch" class="btn-search">
+    
+        </form>
+
+        <section class="user-c">
+
+            <div class="user-perfil">
+
+                <img src="" class="user-image">
+
+                <div>
+
+                    <h2 class="user-name"></h2>
+
+                    <a href="#" class="user-username" target="_blank"></a>
+
+                    <h3 class="user-join">Joined 25 jan 2021</h3>
+
+                </div>
+
+            </div>
+            
+            <p class="user-profile"></p>
+
+            <div class="user-info">
+
+                <aside>
+
+                    <h3>Repos</h3>
+                    <h2 class="user-repos">--</h2>
+
+                </aside>
+
+                <aside class="mobile-space">
+
+                    <h3>Followers</h3>
+                    <h2 class="user-followers">--</h2>
+
+                </aside>
+
+                <aside>
+
+                    <h3>Following</h3>
+                    <h2 class="user-following">--</h2>
+
+                </aside>
+
+            </div>
+
+            <div class="user-links">
+
+                <div>
+
+                    <aside>
+
+                        <img src="images/icon-location.svg">
+
+                        <p class="user-location link-invalid"></p>
+
+                    </aside>
+
+                    <aside>
+                        
+                        <img src="images/icon-website.svg">
+
+                        <p class='user-website link-invalid'></p>
+                    
+                    </aside>
+
+                </div>
+
+                <div>
+
+                    <aside>
+                        
+                        <img src="images/icon-twitter.svg">
+
+                        <p class='user-twitter link-invalid'></p>
+                    
+                    </aside>
+
+                    <aside>
+                        
+                        <img src="images/icon-company.svg">
+
+                        <p class="user-company link-invalid"></p>
+                    
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

@@ -63,7 +63,7 @@ function getTime() {
 
     }
 
-    //defindo os estilos de dia e noite
+    //definindo os estilos de dia e noite
 
     hourStatus.textContent = course;
 
