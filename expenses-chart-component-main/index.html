@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo-fav.svg">
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <link rel="stylesheet" href="styles/index.css">
+
+  <title>Expenses chart component</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header__c animate__animated animate__fadeInDown animate__slow">
+
+      <div class="animate__animated animate__fadeIn animate__delay-1s">
+
+        <h3>My balance</h3>
+
+        <h1 class="title-value">$921.48</h1>
+
+      </div>
+
+      <img src="images/logo.svg" alt="logo" class="animate__animated animate__fadeIn animate__delay-1s">
+
+    </div>
+
+    <div class="content__c animate__animated animate__fadeInUp animate__slow	">
+
+      <h1 class="content-title">Spending - Last 7 days</h1>
+
+      <div class="content__graphic"></div>
+
+      <div class="content__footer animate__animated animate__fadeIn animate__delay-2s">
+
+        <div class="content__left">
+
+          <p class="sub-string">Total this month</p>
+
+          <h1 class="title-total title-value">$478.33</h1>
+
+        </div>
+
+        <div class="content__right">
+
+          <p>
+            <b>+2.4%</b>
+          </p>
+
+          <p class="sub-string">from last month</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
